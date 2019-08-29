@@ -1,0 +1,27 @@
+# baseURI: http://publications.europa.eu/ontology/euvoc/linguisticDescriptions
+# prefix: linguisticDescriptions
+
+@prefix : <http://publications.europa.eu/ontology/euvoc/linguisticDescriptions#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix lemon: <http://lemon-model.net/lemon#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lvont: <http://lexvo.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+euvoc:adjectivalForm
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "indicates the relation between the adjectival form and a noun. Both are instances of skosxl:Label."@en ;
+.
+<http://publications.europa.eu/ontology/euvoc/linguisticDescriptions>
+  rdf:type owl:Ontology ;
+  rdfs:comment "The EuVoc module importing and defining the linguistic relations and classes used in MDR authority tables"^^xsd:string ;
+  rdfs:label "Linguistic Descriptions"^^xsd:string ;
+  owl:imports <http://publications.europa.eu/ontology/euvoc/externalImports> ;
+  owl:versionIRI <http://publications.europa.eu/ontology/euvoc/linguisticDescriptions#1.1> ;
+  owl:versionInfo "EuVoc 1.1"^^xsd:string ;
+.

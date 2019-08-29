@@ -1,0 +1,112 @@
+# baseURI: http://publications.europa.eu/ontology/euvoc/externalImports
+# imports: file:///EuVocOntology/ontologies-lib-release/space/locn.rdf
+# imports: http://creativecommons.org/ns
+# imports: http://data.europa.eu/eli/ontology
+# imports: http://lemon-model.net/lemon
+# imports: http://lexvo.org/ontology
+# imports: http://purl.org/NET/c4dm/event.owl
+# imports: http://purl.org/NET/dc_owl2dl/dcam
+# imports: http://purl.org/NET/dc_owl2dl/dcmitype
+# imports: http://purl.org/NET/dc_owl2dl/terms_od
+# imports: http://vocab.deri.ie/void
+# imports: http://www.lexinfo.net/ontology/2.0/lexinfo
+# imports: http://www.opengis.net/ont/geosparql
+# imports: http://www.opengis.net/ont/gml
+# imports: http://www.w3.org/2003/01/geo/wgs84_pos
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2006/time
+# imports: http://www.w3.org/2006/vcard/ns
+# imports: http://www.w3.org/2008/05/skos-xl
+# imports: http://www.w3.org/ns/adms
+# imports: http://www.w3.org/ns/dcat
+# imports: http://www.w3.org/ns/org#
+# imports: http://www.w3.org/ns/person
+# imports: http://xmlns.com/foaf/0.1/
+# prefix: externalImports
+
+@prefix : <http://publications.europa.eu/ontology/euvoc/externalImports#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix atold-ont: <http://publications.europa.eu/ontology/authority/> .
+@prefix atold-res: <http://publications.europa.eu/resource/authority/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cdm: <http://publications.europa.eu/ontology/cdm#> .
+@prefix cmr: <http://publications.europa.eu/ontology/cdm/cmr#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix extensionDesctiptions: <http://publications.europa.eu/ontology/euvoc/extensionDesctiptions#> .
+@prefix externalImports: <http://publications.europa.eu/ontology/euvoc/externalImports#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix geor: <http://www.opengis.net/def/rule/geosparql/> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix geosparqlsf: <http://www.opengis.net/ont/sf#> .
+@prefix geowgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix gml: <http://www.opengis.net/ont/gml#> .
+@prefix legalDescriptions: <http://publications.europa.eu/ontology/euvoc/legalDescriptions#> .
+@prefix lemon: <http://lemon-model.net/lemon#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix linguisticDescriptions: <http://publications.europa.eu/ontology/euvoc/linguisticDescriptions#> .
+@prefix lvont: <http://lexvo.org/ontology#> .
+@prefix ogc: <http://www.opengis.net/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix pim: <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdaelements: <http://rdaregistry.info/Elements/c/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spatialDescriptions: <http://publications.europa.eu/ontology/euvoc/spatialDescriptions#> .
+@prefix tableDescriptions: <http://publications.europa.eu/ontology/euvoc/tableDescriptions#> .
+@prefix temporalDescriptions: <http://publications.europa.eu/ontology/euvoc/temporalDescriptions#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://publications.europa.eu/ontology/euvoc/externalImports>
+  rdf:type owl:Ontology ;
+  rdfs:comment """This Module manages imports of EuVoc Ontology. 
+One peculiarity of these imports is the choice of OWL-DL versions of popular standard ontologies such as DCT and SKOS.""" ;
+  rdfs:label "Linguistic Descriptions" ;
+  owl:imports <file:///EuVocOntology/ontologies-lib-release/space/locn.rdf> ;
+  owl:imports <http://creativecommons.org/ns> ;
+  owl:imports <http://data.europa.eu/eli/ontology> ;
+  owl:imports <http://lemon-model.net/lemon> ;
+  owl:imports <http://lexvo.org/ontology> ;
+  owl:imports <http://purl.org/NET/c4dm/event.owl> ;
+  owl:imports <http://purl.org/NET/dc_owl2dl/dcam> ;
+  owl:imports <http://purl.org/NET/dc_owl2dl/dcmitype> ;
+  owl:imports <http://purl.org/NET/dc_owl2dl/terms_od> ;
+  owl:imports <http://vocab.deri.ie/void> ;
+  owl:imports <http://www.lexinfo.net/ontology/2.0/lexinfo> ;
+  owl:imports <http://www.opengis.net/ont/geosparql> ;
+  owl:imports <http://www.opengis.net/ont/gml> ;
+  owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2006/time> ;
+  owl:imports <http://www.w3.org/2006/vcard/ns> ;
+  owl:imports <http://www.w3.org/2008/05/skos-xl> ;
+  owl:imports <http://www.w3.org/ns/adms> ;
+  owl:imports <http://www.w3.org/ns/dcat> ;
+  owl:imports org: ;
+  owl:imports <http://www.w3.org/ns/person> ;
+  owl:imports foaf: ;
+  owl:versionIRI <http://publications.europa.eu/ontology/euvoc/externalImports#1.1> ;
+  owl:versionInfo "EuVoc 1.1" ;
+.

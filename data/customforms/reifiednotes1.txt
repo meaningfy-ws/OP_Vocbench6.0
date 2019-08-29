@@ -1,0 +1,20 @@
+{'reifiednotes1' : """
+                        prefix  xsd:    <http://www.w3.org/2001/XMLSchema#>
+                        prefix  rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                        prefix  dct:    <http://purl.org/dc/terms/>
+                        prefix  coda:   <http://art.uniroma2.it/coda/contracts/>
+                        prefix  codaImpl:   <http://art.uniroma2.it/coda/converters/>
+                        prefix euvoc: <http://publications.europa.eu/ontology/euvoc#>
+            
+                        rule it.uniroma2.art.semanticturkey.customform.form.reifiednote.srcap id:reifiednote {
+                        nodes = {
+                            reifNoteId uri(coda:randIdGen("note", {})) .
+                            noteLang literal userPrompt/lang .
+                            noteLit literal(coda:langString($noteLang)) userPrompt/note .
+                            source literal userPrompt/source .
+                        }
+                        graph = {
+                            $reifNoteId a euvoc:XlNote .
+                            $reifNoteId rdf:value $noteLit .
+                            OPTIONAL { $reifNoteId dct:source $source . }
+                        }}"""}

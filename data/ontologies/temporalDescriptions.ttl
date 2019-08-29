@@ -1,0 +1,501 @@
+# baseURI: http://publications.europa.eu/ontology/euvoc/temporalDescriptions
+# prefix: temporalDescriptions
+
+@prefix : <http://publications.europa.eu/ontology/euvoc/temporalDescriptions#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tf: <http://publications.europa.eu/resource/authority/frequency/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix tp: <http://publications.europa.eu/resource/authority/timeperiod/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+euvoc:duratonUnit
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "time span during which occurences occur"^^xsd:string ;
+  rdfs:domain dct:Frequency ;
+  rdfs:label "duraton unit"^^xsd:string ;
+  rdfs:range time:DurationDescription ;
+  owl:versionInfo "EuVoc 1.1"^^xsd:string ;
+.
+euvoc:occurence
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "occurence"^^xsd:string ;
+  rdfs:domain dct:Frequency ;
+  rdfs:label "occurence"^^xsd:string ;
+  rdfs:range xsd:decimal ;
+  owl:versionInfo "EuVoc 1.1"^^xsd:string ;
+.
+<http://publications.europa.eu/ontology/euvoc/temporalDescriptions>
+  rdf:type owl:Ontology ;
+  rdfs:comment "The EuVoc module importing and defining the temporal relations and classes used in MDR authority tables"^^xsd:string ;
+  rdfs:label "Temporal Descriptions"^^xsd:string ;
+  owl:imports <http://publications.europa.eu/ontology/euvoc/externalImports> ;
+  owl:versionInfo "EuVoc 1.1"^^xsd:string ;
+.
+tf:ANNUAL
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> tp:YEAR ;
+  <euvoc:occurence> "1"^^xsd:decimal ;
+  rdfs:comment "Every year"^^xsd:string ;
+  rdfs:label "ANNUAL"^^xsd:string ;
+.
+tf:ANNUAL_2
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> tp:YEAR ;
+  <euvoc:occurence> "2"^^xsd:decimal ;
+  rdfs:comment "Semiannual"^^xsd:string ;
+  rdfs:label "ANNUAL_2"^^xsd:string ;
+.
+tf:ANNUAL_3
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> tp:YEAR ;
+  <euvoc:occurence> "3"^^xsd:decimal ;
+  rdfs:comment "three times a year"^^xsd:string ;
+  rdfs:label "ANNUAL_3"^^xsd:string ;
+.
+tf:BIENNIAL
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> [
+      rdf:type time:DurationDescription ;
+      time:years "2"^^xsd:decimal ;
+    ] ;
+  <euvoc:occurence> "1"^^xsd:decimal ;
+  rdfs:comment "Every two years"^^xsd:string ;
+  rdfs:label "BIENNIAL"^^xsd:string ;
+.
+tf:BIMONTHLY
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> [
+      rdf:type time:DurationDescription ;
+      time:months "2"^^xsd:decimal ;
+    ] ;
+  <euvoc:occurence> "1"^^xsd:decimal ;
+  rdfs:comment "BIMONTHLY"^^xsd:string ;
+  rdfs:label "BIMONTHLY"^^xsd:string ;
+.
+tf:BIWEEKLY
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> [
+      rdf:type time:DurationDescription ;
+      time:weeks "2"^^xsd:decimal ;
+    ] ;
+  <euvoc:occurence> "1"^^xsd:decimal ;
+  rdfs:comment "BIWEEKLY"^^xsd:string ;
+  rdfs:label "BIWEEKLY"^^xsd:string ;
+  owl:sameAs tf:MONTHLY_2 ;
+.
+tf:CONT
+  rdf:type dct:Frequency ;
+  rdfs:comment "continuous"^^xsd:string ;
+  rdfs:label "continuous"^^xsd:string ;
+.
+tf:DAILY
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> tp:DAY ;
+  <euvoc:occurence> "1"^^xsd:decimal ;
+  rdfs:comment "DAILY"^^xsd:string ;
+  rdfs:label "DAILY"^^xsd:string ;
+.
+tf:DAILY_2
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> tp:DAY ;
+  <euvoc:occurence> "2"^^xsd:decimal ;
+  rdfs:comment "DAILY 2"^^xsd:string ;
+  rdfs:label "DAILY 2"^^xsd:string ;
+.
+tf:IRREG
+  rdf:type dct:Frequency ;
+  rdfs:comment "irregular"^^xsd:string ;
+  rdfs:label "irregular"^^xsd:string ;
+.
+tf:MONTHLY
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> tp:MONTH ;
+  <euvoc:occurence> "1"^^xsd:decimal ;
+  rdfs:comment "MONTHLY"^^xsd:string ;
+  rdfs:label "MONTHLY"^^xsd:string ;
+.
+tf:MONTHLY_2
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> tp:MONTH ;
+  <euvoc:occurence> "2"^^xsd:decimal ;
+  rdfs:comment "MONTHLY 2"^^xsd:string ;
+  rdfs:label "MONTHLY 2"^^xsd:string ;
+.
+tf:MONTHLY_3
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> tp:MONTH ;
+  <euvoc:occurence> "3"^^xsd:decimal ;
+  rdfs:comment "MONTHLY 3"^^xsd:string ;
+  rdfs:label "MONTHLY 3"^^xsd:string ;
+.
+tf:NEVER
+  rdf:type dct:Frequency ;
+  <euvoc:occurence> "0"^^xsd:decimal ;
+  rdfs:comment "NEVER"^^xsd:string ;
+  rdfs:label "NEVER"^^xsd:string ;
+.
+tf:OTHER
+  rdf:type dct:Frequency ;
+  rdfs:comment "OTHER"^^xsd:string ;
+  rdfs:label "OTHER"^^xsd:string ;
+.
+tf:QUARTERLY
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> tp:QUARTER ;
+  <euvoc:occurence> "1"^^xsd:decimal ;
+  rdfs:comment "quarterly"^^xsd:string ;
+  rdfs:label "QUARTERLY"^^xsd:string ;
+.
+tf:TRIENNIAL
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> [
+      rdf:type time:DurationDescription ;
+      time:years "3"^^xsd:decimal ;
+    ] ;
+  <euvoc:occurence> "1"^^xsd:decimal ;
+  rdfs:comment "Every three years"^^xsd:string ;
+  rdfs:label "TRIENNIAL"^^xsd:string ;
+.
+tf:UNKNOWN
+  rdf:type dct:Frequency ;
+  rdfs:comment "UNKNOWN"^^xsd:string ;
+  rdfs:label "UNKNOWN"^^xsd:string ;
+.
+tf:UPDATE_CONT
+  rdf:type dct:Frequency ;
+  rdfs:comment "continuously updated"^^xsd:string ;
+  rdfs:label "continuously updated"^^xsd:string ;
+.
+tf:WEEKLY
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> tp:WEEK ;
+  <euvoc:occurence> "1"^^xsd:decimal ;
+  rdfs:comment "WEEKLY"^^xsd:string ;
+  rdfs:label "WEEKLY"^^xsd:string ;
+.
+tf:WEEKLY_2
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> tp:WEEK ;
+  <euvoc:occurence> "2"^^xsd:decimal ;
+  rdfs:comment "WEEKLY 2"^^xsd:string ;
+  rdfs:label "WEEKLY 2"^^xsd:string ;
+.
+tf:WEEKLY_3
+  rdf:type dct:Frequency ;
+  <euvoc:duratonUnit> tp:WEEK ;
+  <euvoc:occurence> "3"^^xsd:decimal ;
+  rdfs:comment "WEEKLY 3"^^xsd:string ;
+  rdfs:label "WEEKLY 3"^^xsd:string ;
+.
+tp:APR
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "April"^^xsd:string ;
+  rdfs:label "April"^^xsd:string ;
+  time:month "--04"^^xsd:gMonth ;
+  time:unitType time:unitMonth ;
+.
+tp:AUG
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "August"^^xsd:string ;
+  rdfs:label "August"^^xsd:string ;
+  time:month "--08"^^xsd:gMonth ;
+  time:unitType time:unitMonth ;
+.
+tp:AUTUMN
+  rdf:type time:ProperInterval ;
+  rdfs:comment "Autumn"^^xsd:string ;
+  rdfs:label "Autumn"^^xsd:string ;
+  time:before tp:WINTER ;
+  time:hasDurationDescription tp:SEASON ;
+  time:intervalMeets tp:WINTER ;
+.
+tp:BeginningOfQ1
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "Beginning of q1"^^xsd:string ;
+  rdfs:label "Beginning of q1"^^xsd:string ;
+.
+tp:BeginningOfQ2
+  rdf:type time:GeneralDateTimeDescription ;
+  rdfs:comment "Beginning of q2"^^xsd:string ;
+  rdfs:label "Beginning of q2"^^xsd:string ;
+.
+tp:DAY
+  rdf:type time:DurationDescription ;
+  rdfs:comment "Day"^^xsd:string ;
+  rdfs:label "Day"^^xsd:string ;
+  time:days "1"^^xsd:decimal ;
+  time:hours "0"^^xsd:decimal ;
+  time:minutes "0"^^xsd:decimal ;
+  time:months "0"^^xsd:decimal ;
+  time:seconds "0"^^xsd:decimal ;
+  time:years "0"^^xsd:decimal ;
+.
+tp:DEC
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "December"^^xsd:string ;
+  rdfs:label "December"^^xsd:string ;
+  time:month "--12"^^xsd:gMonth ;
+  time:unitType time:unitMonth ;
+.
+tp:FEB
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "February"^^xsd:string ;
+  rdfs:label "February"^^xsd:string ;
+  time:month "--02"^^xsd:gMonth ;
+  time:unitType time:unitMonth ;
+.
+tp:FRI
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "Friday"^^xsd:string ;
+  rdfs:label "Friday"^^xsd:string ;
+  time:dayOfWeek time:Friday ;
+  time:unitType time:unitDay ;
+.
+tp:HOUR
+  rdf:type time:DurationDescription ;
+  rdfs:comment "Hour"^^xsd:string ;
+  rdfs:label "Hour"^^xsd:string ;
+  time:days "0"^^xsd:decimal ;
+  time:hours "1"^^xsd:decimal ;
+  time:minutes "0"^^xsd:decimal ;
+  time:months "0"^^xsd:decimal ;
+  time:seconds "0"^^xsd:decimal ;
+  time:years "0"^^xsd:decimal ;
+.
+tp:JAN
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "January"^^xsd:string ;
+  rdfs:label "January"^^xsd:string ;
+  time:month "--01"^^xsd:gMonth ;
+  time:unitType time:unitMonth ;
+.
+tp:JUL
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "July"^^xsd:string ;
+  rdfs:label "July"^^xsd:string ;
+  time:month "--07"^^xsd:gMonth ;
+  time:unitType time:unitMonth ;
+.
+tp:JUN
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "June"^^xsd:string ;
+  rdfs:label "June"^^xsd:string ;
+  time:month "--06"^^xsd:gMonth ;
+  time:unitType time:unitMonth ;
+.
+tp:MAR
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "January"^^xsd:string ;
+  rdfs:label "January"^^xsd:string ;
+  time:month "--03"^^xsd:gMonth ;
+  time:unitType time:unitMonth ;
+.
+tp:MAY
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "May"^^xsd:string ;
+  rdfs:label "May"^^xsd:string ;
+  time:month "--05"^^xsd:gMonth ;
+  time:unitType time:unitMonth ;
+.
+tp:MINUTE
+  rdf:type time:DurationDescription ;
+  rdfs:comment "Minute"^^xsd:string ;
+  rdfs:label "Minute"^^xsd:string ;
+  time:days "0"^^xsd:decimal ;
+  time:hours "0"^^xsd:decimal ;
+  time:minutes "1"^^xsd:decimal ;
+  time:months "0"^^xsd:decimal ;
+  time:seconds "0"^^xsd:decimal ;
+  time:years "0"^^xsd:decimal ;
+.
+tp:MON
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "Monday"^^xsd:string ;
+  rdfs:label "Monday"^^xsd:string ;
+  time:dayOfWeek time:Monday ;
+  time:unitType time:unitDay ;
+.
+tp:MONTH
+  rdf:type time:DurationDescription ;
+  rdfs:comment "Month"^^xsd:string ;
+  rdfs:label "Month"^^xsd:string ;
+  time:days "0"^^xsd:decimal ;
+  time:hours "0"^^xsd:decimal ;
+  time:minutes "0"^^xsd:decimal ;
+  time:months "1"^^xsd:decimal ;
+  time:seconds "0"^^xsd:decimal ;
+  time:years "0"^^xsd:decimal ;
+.
+tp:NOV
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "November"^^xsd:string ;
+  rdfs:label "November"^^xsd:string ;
+  time:month "--11"^^xsd:gMonth ;
+  time:unitType time:unitMonth ;
+.
+tp:OCT
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "Octomber"^^xsd:string ;
+  rdfs:label "Octomber"^^xsd:string ;
+  time:month "--10"^^xsd:gMonth ;
+  time:unitType time:unitMonth ;
+.
+tp:Q1
+  rdf:type time:ProperInterval ;
+  rdfs:comment "Q1"^^xsd:string ;
+  rdfs:label "Q1"^^xsd:string ;
+  time:hasBeginning [
+      rdf:type time:Instant ;
+      time:inDateTime tp:BeginningOfQ1 ;
+    ] ;
+  time:hasDurationDescription tp:QUARTER ;
+  time:hasEnd [
+      rdf:type time:Instant ;
+      time:inDateTime tp:BeginningOfQ2 ;
+    ] ;
+.
+tp:Q2
+  rdf:type time:ProperInterval ;
+  rdfs:comment "Q2"^^xsd:string ;
+  rdfs:label "Q2"^^xsd:string ;
+.
+tp:Q3
+  rdf:type time:ProperInterval ;
+  rdfs:comment "Q3"^^xsd:string ;
+  rdfs:label "Q3"^^xsd:string ;
+.
+tp:Q4
+  rdf:type time:ProperInterval ;
+  rdfs:comment "Q4"^^xsd:string ;
+  rdfs:label "Q4"^^xsd:string ;
+.
+tp:QUARTER
+  rdf:type time:DurationDescription ;
+  rdfs:comment "Quarter"^^xsd:string ;
+  rdfs:label "Quarter"^^xsd:string ;
+  time:days "0"^^xsd:decimal ;
+  time:hours "0"^^xsd:decimal ;
+  time:minutes "0"^^xsd:decimal ;
+  time:months "3"^^xsd:decimal ;
+  time:seconds "0"^^xsd:decimal ;
+  time:years "0"^^xsd:decimal ;
+.
+tp:SAT
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "Saturday"^^xsd:string ;
+  rdfs:label "Saturday"^^xsd:string ;
+  time:dayOfWeek time:Saturday ;
+  time:unitType time:unitDay ;
+.
+tp:SEASON
+  rdf:type time:DurationDescription ;
+  rdfs:comment "SEASON"^^xsd:string ;
+  rdfs:label "SEASON"^^xsd:string ;
+.
+tp:SECOND
+  rdf:type time:DurationDescription ;
+  rdfs:comment "Second"^^xsd:string ;
+  rdfs:label "Second"^^xsd:string ;
+  time:days "0"^^xsd:decimal ;
+  time:hours "0"^^xsd:decimal ;
+  time:minutes "0"^^xsd:decimal ;
+  time:months "0"^^xsd:decimal ;
+  time:seconds "1"^^xsd:decimal ;
+  time:years "0"^^xsd:decimal ;
+.
+tp:SEP
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "September"^^xsd:string ;
+  rdfs:label "September"^^xsd:string ;
+  time:month "--09"^^xsd:gMonth ;
+  time:unitType time:unitMonth ;
+.
+tp:SPRING
+  rdf:type time:ProperInterval ;
+  rdfs:comment "Spring"^^xsd:string ;
+  rdfs:label "Spring"^^xsd:string ;
+  time:before tp:SUMMER ;
+  time:hasDurationDescription tp:SEASON ;
+  time:intervalMeets tp:SUMMER ;
+.
+tp:SUMMER
+  rdf:type time:ProperInterval ;
+  rdfs:comment "Summer"^^xsd:string ;
+  rdfs:label "Summer"^^xsd:string ;
+  time:before tp:AUTUMN ;
+  time:hasDurationDescription tp:SEASON ;
+  time:intervalMeets tp:AUTUMN ;
+.
+tp:SUN
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "Sunday"^^xsd:string ;
+  rdfs:label "Sunday"^^xsd:string ;
+  time:dayOfWeek time:Sunday ;
+  time:unitType time:unitDay ;
+.
+tp:THU
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "Thursday"^^xsd:string ;
+  rdfs:label "Thursday"^^xsd:string ;
+  time:dayOfWeek time:Thursday ;
+  time:unitType time:unitDay ;
+.
+tp:TUE
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "Tuesday"^^xsd:string ;
+  rdfs:label "Tuesday"^^xsd:string ;
+  time:dayOfWeek time:Tuesday ;
+  time:unitType time:unitDay ;
+.
+tp:WED
+  rdf:type time:DateTimeDescription ;
+  rdfs:comment "Wednesday"^^xsd:string ;
+  rdfs:label "Wednesday"^^xsd:string ;
+  time:dayOfWeek time:Wednesday ;
+  time:unitType time:unitDay ;
+.
+tp:WEEK
+  rdf:type time:DurationDescription ;
+  rdfs:comment "Week"^^xsd:string ;
+  rdfs:label "Week"^^xsd:string ;
+  time:days "7"^^xsd:decimal ;
+  time:hours "0"^^xsd:decimal ;
+  time:minutes "0"^^xsd:decimal ;
+  time:months "0"^^xsd:decimal ;
+  time:seconds "0"^^xsd:decimal ;
+  time:years "0"^^xsd:decimal ;
+.
+tp:WINTER
+  rdf:type time:ProperInterval ;
+  rdfs:comment "Winter"^^xsd:string ;
+  rdfs:label "Winter"^^xsd:string ;
+  time:before tp:SPRING ;
+  time:hasDurationDescription tp:SEASON ;
+  time:intervalMeets tp:SPRING ;
+.
+tp:YEAR
+  rdf:type time:DurationDescription ;
+  rdfs:comment "Year"^^xsd:string ;
+  rdfs:label "Year"^^xsd:string ;
+  time:days "0"^^xsd:decimal ;
+  time:hours "0"^^xsd:decimal ;
+  time:minutes "0"^^xsd:decimal ;
+  time:months "0"^^xsd:decimal ;
+  time:seconds "0"^^xsd:decimal ;
+  time:years "1"^^xsd:decimal ;
+.
+tp:YEAR_HALF
+  rdf:type time:DurationDescription ;
+  rdfs:comment "Half Year"^^xsd:string ;
+  rdfs:label "Half Year"^^xsd:string ;
+  time:days "0"^^xsd:decimal ;
+  time:hours "0"^^xsd:decimal ;
+  time:minutes "0"^^xsd:decimal ;
+  time:months "6"^^xsd:decimal ;
+  time:seconds "0"^^xsd:decimal ;
+  time:years "0"^^xsd:decimal ;
+.

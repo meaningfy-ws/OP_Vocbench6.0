@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://publications.europa.eu/ontology/euvoc/tableDescriptions#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <owl:Ontology rdf:about="http://publications.europa.eu/ontology/euvoc/tableDescriptions">
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">The EuVoc module defining the imports of all MDR authority tables and EuroVoc ontology.</rdfs:comment>
+      <rdfs:label xml:lang="en">Table descriptions</rdfs:label>
+   </owl:Ontology>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#AccessRight">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/access-right"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Access right NAL provides the access rights or restrictions to resources. It is designed for but not limited to DCAT descriptions of datasets.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Access right</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ActivityType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/activity-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to do</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activity type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#AddressType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/address-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the address types as used in the EU Whoiswho.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Address type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Atu">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+      <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/atu"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               This table provides the list of the various administrative territorial units of the EU Member States.
+               The name of each territorial unit can be found in the "Administrative territorial unit types" (ATTY) table.
+               Due to the large volume of lowest level administrative units (local authority, municipality) in certain countries, these units have not yet been fully implemented.
+               The lists of codes represent the administrative territorial units, based on national official / legal information and the ISO 3166-2 standard. Differences can be noticed due to the rapid changes occurring in the countries.
+               The codes have been created, as far as possible, by integrating the code used in UNECE http://www.unece.org/cefact/locode/service/location.html
+               The administrative territorial units must not be confused with the Nomenclature of Territorial Units for Statistics (NUTS). The NUTS is delineated according to the population living in the territorial unit and is used in an economical / statistical environment. More information can be found on http://ec.europa.eu/eurostat/web/nuts/principles-and-characteristics
+               The administrative territorial units must not be confused with the jurisdiction territories designed for the competence area of Courts.
+               In certain countries, the subdivisions may be the same for the administrative, economical, statistical and jurisdiction units.
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Administrative territorial unit</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#AtuType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/atu-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               This table provides the various types of administrative territorial units within the Member States of the European Union. It is linked to the "Administrative territorial units (ATU)" table that provides the list of the subdivisions per country.
+               The categorization of these types is based on national official information and the Committee of the Regions of the European Union has provided the translations in all official languages of the European Union. The ISO 3166-2 standard has also been used. Where there are differences in the territorial unit types and the ISO code, the legal basis of the country concerned has taken precedence.
+               An administrative unit is defined for the purpose of administration with a certain degree of autonomy and is country specific. The administrative unit refers to public administration for which the administrative law is applicable.
+               The administrative territorial unit types must not be confused with the Nomenclature of Territorial Units for Statistics (NUTS). The NUTS is delineated according to the population living in the territorial unit and is used in an economical / statistical environment. More information can be found on http://ec.europa.eu/eurostat/web/nuts/principles-and-characteristics
+               The administrative territorial unit types must not be confused with the jurisdiction territories designed for the competence area of Courts.
+               In certain countries, the subdivisions may be the same for the administrative, economical, statistical and jurisdiction units.
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Administrative territorial unit type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#AuthorityType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/authority-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to do</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Authority type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CapitalClassification">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Role"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/capital-classification"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Capital classification NAL provides possible locality statuses.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capital classification</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CaseReport">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/case-report"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the different names of the case law reports of the Court of Justice.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Case report</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CaseStatus">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/case-status"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the different statuses used for a case at the Court of Justice.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Case status</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ClassSumLeg">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/class-sum-leg"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the classification of summary of legislation.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classification of summary of legislation</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ComInternalConsultationType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/com_internal_consultation_type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COM internal consultation type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ComInternalEvent">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/com_internal_event"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COM internal event</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ComInternalProcedure">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/com_internal_procedure"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COM internal procedure</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ConceptStatus">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/concept-status"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table is an internal table at the Publications Office and provides the various statuses used in a harmonized way amongst the various tables (NALs).</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concept status</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Continent">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+      <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/continent"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table is an internal table at the Publications Office derived from the Countries table.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Continent</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Corporate">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
+      <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
+      <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/corporate-body"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               This table provides the varying names of EU corporate bodies for a given time span. Some other corporate bodies are also included as far as they are used in the various systems in the Publications Office. They are classified accordingly in "EU" | "INT (for international)" | "Other". The traceability of the chronological modifications is ensured when possible.
+               &lt;br/&gt;&lt;br/&gt;
+               For the EU Corporate bodies, the legal basis is also indicated, as far as they are known.
+               &lt;br/&gt;&lt;br/&gt;
+               As the official languages have changed over the time, the translations are provided in the existing official languages for a given period. The names are provided under the labels and in a longer form (e.g. Committee of the Regions | Committee of the Regions of the European Union).
+               &lt;br/&gt;&lt;br/&gt;
+               A bi-directional vertical relationship shows how the entities are connected in a parent-child relationship.
+               &lt;br/&gt;&lt;br/&gt;
+               A bi-directional horizontal relationship is establish between the entities, starting at a given date and, if the case occurs, the link to the successor and the predecessor.
+               &lt;br/&gt;&lt;br/&gt;
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate body</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CorporateBodyClassification">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/corporate-body-classification"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Corporate body classification NAL provides types of corporate bodies.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate body classification</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CorrectionStatus">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/correction-status"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Correction status NAL provides the possible statuses of proofreading of labels and descriptions.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Correction status</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Country">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+      <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+      <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+      <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/country"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               This country codes authority table is intended to provide a code &lt;u&gt;related&lt;/u&gt; to the names of the countries – in a short and in a long form – in the 24 official languages of the European Union.
+               These codes are used for the documentary metadata and may present slight differences with those used for the production of documents at a stylistic level.
+               &lt;br/&gt;&lt;br/&gt;
+               The "Authority code" relays on the ISO 3166-1/alpha-3 positions. If the ISO code doesn't exist, an alpha-numeric code is created. A traceability of this codes creation is ensured and historical relationships are also offered as from 1950 till now with the date(s) of event(s).
+               &lt;br&gt;&lt;br&gt;
+               A country code comparison is provided between ISO codes, IANA codes (Internet ccTLDS – Country-code Top-level Domains), and TIR (Transport International par la Route) Vehicle system codes.
+               &lt;br&gt;&lt;br&gt;
+               Codes marked in &lt;i&gt;italic&lt;/i&gt; are obsolete and should not be used, excepted in the case of back-log work.&lt;br&gt;&lt;br&gt;ISO 3166 is the &lt;b&gt;International standard for country codes&lt;/b&gt;. The purpose of ISO 3166 is to establish &lt;b&gt;codes for the representation&lt;/b&gt; of names of countries. This standard exists in three forms:
+               &lt;ul&gt;
+               &lt;li&gt;ISO 3166-1 (2006) contains a &lt;b&gt;two-letter&lt;/b&gt; code which is recommended as the general purpose code, a &lt;b&gt;three-letter&lt;/b&gt; code which has better mnenomic properties and a numeric-3 code which can be useful if script independence of the codes is important.&lt;/li&gt;
+               &lt;li&gt;ISO 3166-2 (2007) gives codes for the names of the principal subdivisions (e.g provinces or states) of all countries coded in ISO 3166-1. This code is based on the two-letter code element from ISO 3166-1 followed by a separator and a further string of up to three alphanumeric characters.&lt;/li&gt;
+               &lt;li&gt;ISO 3166-3 (1999) contains a four-letter code for those country names which have been deleted from ISO 3166-1 since its first publication in 1974. The code elements for formerly used country names have a length of four alphabetical characters (alpha-4 code elements).&lt;/li&gt;
+               &lt;/ul&gt;
+               The ISO 3166-1 is also used by the EU &lt;a href="http://epp.eurostat.ec.europa.eu/cache/ITY_OFFPUB/KS-BM-04-002/EN/KS-BM-04-002-EN.PDF"&gt;Geonomenclature&lt;/a&gt; of the Statistical Office, the &lt;a href="http://www.unece.org/cefact/locode/"&gt;UN/LOCODE&lt;/a&gt;, the &lt;a href="http://www.wipo.int/portal/index.html.en"&gt;World Intellectual Property Organisation&lt;/a&gt; (WIPO), the &lt;a href="http://www.iaea.org/"&gt;International Atomic Energy Agency&lt;/a&gt; (IAEA), the &lt;a href="http://www.iana.org"&gt;Internet Assigned Authority Numbers&lt;/a&gt; (IANA) and more &lt;a href="http://www.iso.org/iso/country_codes/background_on_iso_3166/implementation_of_iso_3166-1.htm"&gt;other organisations&lt;/a&gt;.
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Country</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Court">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/court"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Court</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CourtType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/court-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Court type NAL provides a classification of courts.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Court type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Currency">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/currency"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               The Currencies Named Authority List (NAL) or Common Authority Table (CAT) is a controlled vocabulary listing currencies with their authority code and labels in the 24 official languages of the EU (when available). The list is based on the ISO standard ISO 4217. This NAL is maintained by the Publications Office of the EU in its Metadata Registry (MDR).
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Currency</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#DataTheme">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/data-theme"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the various themes used for dataset classification. The table has been developed in the context of the revision of the DCAT-AP. The themes have been defined by the working group in charge of the revision of the DCAT-AP.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data theme</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#DatasetStatus">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/dataset-status"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides possible statuses for datasets. It has been developed specifically for the EU Open Data Portal.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dataset status</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#DatasetType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/dataset-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides possible types for categorising a dataset. It has been developed specifically for the EU Open Data Portal.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dataset type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#DirEuLegalAct">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/dir-eu-legal-act"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Directory of EU legal acts</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#DistributionType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/distribution-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides possible distribution types. It has been developed specifically for the EU Open Data Portal.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Distribution type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#DocumentStatus">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/document-status"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to do</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Document status</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#DocumentationType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/documenatation-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides possible documentation types. It has been developed specifically for the EU Open Data Portal.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Documentation type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#EuBudgetAmountStatus">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/eu-budget-amount-status"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides possible statuses for amounts in the EU budget. It has been developed specifically for the EU budget as Linked Open Data project.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EU budget amount status</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#EuBudgetStage">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/eu-budget-stage"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides possible stages of the EU budget preparatory actions and pilot projects. It has been developed specifically for the EU budget as Linked Open Data project.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EU budget stage</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#EuBudgetStatus">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/eu-budget-status"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides possible statuses of the EU budget preparatory actions and pilot projects. It has been developed specifically for the EU budget as Linked Open Data project.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EU budget status</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#EuProgramme">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/eu-programme"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides programmes financially supported by the EU. It has been developed specifically for the EU budget as Linked Open Data project. It will be completed with other programmes at a later stage.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EU programme</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#EuroVoc">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://eurovoc.europa.eu/100141"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuroVoc is a multilingual, multidisciplinary thesaurus covering the activities of the EU, the European Parliament in particular. It contains terms in 23 EU languages (Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish and Swedish), plus in three languages of countries which are candidates for EU accession: македонски (mk), shqip (sq) and cрпски (sr).</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuroVoc</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Event">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/event"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               This authority table has been set up in order to harmonize and to trace historically the various events triggered by an agent within the procedures and associated to a resource type.The various sources of information were extracted from Pegase and Prelex and provided by the "C.2.003 Gestion documentaire – Procédures législatives" section.
+               The approach will be the same as for other authority tables, for each concept (for each event): &lt;ul&gt;
+               &lt;li&gt;one PrefLabel (label), one abbreviated label&lt;/li&gt;
+               &lt;li&gt;one OP authority code (OP-code) used for identifying the concept and used in the URI&lt;/li&gt; &lt;/ul&gt;Codes marked in &lt;span style='font-style:italic;'&gt;italic&lt;/span&gt; are obsolete and should not be used, except in the case of back-log work.The sheet "Metadata codes and names" contains the events known to OP at the present time. New entries will be added once they will have been agreed with the IMMC members.
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#FileType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/file-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The File types NAL lists the different types of (digital) files (e.g. PDF, XML, DOC, …).</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">File type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Formjug">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/formjug"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               This table shows the composition of all three Union courts: Court of Justice, the General Court and the Civil Service Tribunal according to the case they are seized with (Articles 251, 254 and 257 of the Treaty on the Functioning of the European Union (TFEU)).
+               &lt;br&gt;&lt;br&gt;
+               More detailed information can be found in the Statute of the Court of Justice of the European Union common to all three courts, as well as in the respective Rules of Procedure of these courts, available on the website of the Court of Justice of the European Union:
+               &lt;ul&gt;
+               &lt;li&gt;Statute of the Court of Justice of the European Union (1-7-2013) : &lt;a href="http://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/staut_cons_en.pdf"&gt;http://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/staut_cons_en.pdf&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;Rules of Procedure of the Court of Justice (18-6-2013): &lt;a href="http://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/rp_en.pdf"&gt;http://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/rp_en.pdf&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;Rules of Procedure of the General Court (1-7-2013):&lt;a href="http://curia.europa.eu/jcms/upload/docs/application/pdf/2008-09/txt7_2008-09-25_14-08-6_431.pdf"&gt;http://curia.europa.eu/jcms/upload/docs/application/pdf/2008-09/txt7_2008-09-25_14-08-6_431.pdf&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;Rules of Procedure of the European Union Civil Service Tribunal (1-7-2011): &lt;a href="http://curia.europa.eu/jcms/upload/docs/application/pdf/2010-04/rp_14_04_2010_en.pdf"&gt;http://curia.europa.eu/jcms/upload/docs/application/pdf/2010-04/rp_14_04_2010_en.pdf&lt;/a&gt;&lt;/li&gt;
+               &lt;/ul&gt;
+               These concepts are used for the production of reports of cases before the Court and to publish the case-law on the EUR-Lex site: http://eur-lex.europa.eu/collection/eu-law/eu-case-law.html
+               &lt;br&gt;&lt;br&gt;
+               The concepts are put in alphabetical order. The columns featuring &lt;img src="../../../../shared/img/bg.gif"&gt; can be displayed in descending or ascending order.
+               &lt;br&gt;&lt;br&gt;
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formation of the Court</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Frequency">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/frequency"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the accrual periodicities in the 24 official languages of the European Union.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frequency</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#GrammaticalAlternation">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/grammatical-alternation"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Grammatical alternation NAL captures the phonological alternations based on whether the first letter of the succeeding word is a consonant or a vowel. It is used for but not limited to number forms in the Maltese language.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grammatical alternation</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#GrammaticalConsciousness">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/grammatical-consciousness"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Grammatical consciousness NAL provides the grammatical features regarding consciousness of a substantive. This NAL is designed to capture number forms variations in the Irish language.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grammatical consciousness</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#GrammaticalGender">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/grammatical-gender"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Grammatical gender NAL provides the list of the grammatical genders.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grammatical gender</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#GrammaticalNumber">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/grammatical-number"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Grammatical number NAL provides the list of the grammatical numbers.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grammatical number</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#HonorificTitle">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/honorific"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the honorific titles used in addressing or referring to a person as used in the EU Whoiswho.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Honorific</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#HumanSex">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/human-sex"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the list of human sexes.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human sex</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#LabelType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Label type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Language">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/language"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               &lt;br/&gt; &lt;br/&gt;
+               The language code table is based on ISO 639 standard which is issued in several parts:&lt;br/&gt;
+               &lt;ul&gt;
+               &lt;li&gt;ISO 639-1 contains strictly two alphabetic letters, called α-2,&lt;/li&gt;
+               &lt;li&gt;ISO 639-2/B "B" = bibliographic – α-3 is used for bibliographic purpose,&lt;/li&gt;
+               &lt;li&gt;ISO 639-2/T "T" = terminology – α-3 is used for technical purpose,&lt;/li&gt;
+               &lt;li&gt;ISO 639-3 α-3 covers all the languages and macro-languages of the world; the values are compliant with ISO 639-2/T.&lt;/li&gt;
+               &lt;/ul&gt;
+               &lt;br/&gt;&lt;br/&gt;
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Language</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Licence">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/licence"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the European Commission Reuse Notice and a list of standard licences available internationally.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Licence</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#LicenceDomain">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/licence-domain"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Licence domain NAL provides a list of domains covered by licences.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Licence domain</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#MembershipClassification">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Membership classification NAL provides a list of politico-economic units for classifying countries, localities or languages. This NAL focuses mainly on units with European relevance.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Membership classification</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ModificationType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/modification-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Modification type NAL provides a list of modifications to the legal act resulting from instructions in the modifying act or corrigenda.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modification type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Multilingual">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/multilingual"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               &lt;br&gt;The multilingual code table is based on the language authority table. It contains language combinations used for catalogue purposes. The EU publications generally use two-character codes, the first two positions of the authority code. &lt;br&gt;
+               &lt;br&gt;The codes and names follow their alphabetical order, so the elements of the same entry could be in different order, e.g. 2Y0 French, Spanish; FRA | SPA; fre | spa; es | fr. &lt;br&gt;
+               &lt;br&gt;&lt;br&gt;
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multilingual</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#NotationType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/notation-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Notation type NAL provides the list of notation types used in authority tables.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notation type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Number">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/number"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               The Numbers Named Authority List (NAL) is a controlled vocabulary listing a set of cardinal and ordinal numbers in the 24 official languages of the EU.
+               The NAL is mainly used for numbering the issues.
+               The NAL is under governance of the Interinstitutional Metadata Maintenance Committee (IMMC) and maintained by the Publications Office of the EU.
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#NumberType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/number-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Number type NAL provides the grammatical distinctions of numerals. The grammar distinguishes between cardinal and ordinal numbers.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#OrganizationType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/organization-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the various types of organizations as used in the EU Whoiswho application.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organization type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Place">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+      <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/place"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Table of places (locations), based on the UN LOCODE tables Contents: Place/Town name (+ optional translation), validity-dates, geographical information (coordinates).</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#PositionGrade">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/position-grade"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the position grade of the staff employed by the European institutions, bodies or agencies. It has been developed specifically for the EU budget as Linked Open Data project.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position grade</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#PositionStatus">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/position-status"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the position status of the staff employed by the European institutions, bodies or agencies as used in the EU Whoiswho application.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position status</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#PositionType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/position-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the list of possible types of position of the staff employed by the European institutions, bodies or agencies. The table contains three values: permanent, temporary, contractual. It has been developed specifically for the EU budget as Linked Open Data project.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Procedure">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/procedure"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Interinstitutional procedures NAL lists the different procedures used in the context of data exchange between the institutions involved in the legislative process.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interinstitutional procedure</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ProcedureNature">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/procedure-nature"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Procedure nature NAL provides different types of procedures.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Procedure nature</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Procjur">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/procjur"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               This table presents concepts relating to different legal remedies available to an applicant before the EU Courts (Court of Justice, the General Court and the Civil Service Tribunal) (Articles 260, 263, 268 and 270 of the Treaty on the Functioning of the European Union).
+               &lt;br&gt;&lt;br&gt;
+               More detailed information can be consulted in the Rules of Procedure of these courts, available on the website of the Court of Justice of the European Union:
+               &lt;ul&gt;
+               &lt;li&gt;Rules of Procedure of the Court of Justice (18-6-2013): &lt;a href="http://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/rp_en.pdf"&gt;http://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/rp_en.pdf&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;Rules of Procedure of the General Court (1-7-2013): &lt;a href="http://curia.europa.eu/jcms/upload/docs/application/pdf/2008-09/txt7_2008-09-25_14-08-6_431.pdf"&gt;http://curia.europa.eu/jcms/upload/docs/application/pdf/2008-09/txt7_2008-09-25_14-08-6_431.pdf&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;Rules of Procedure of the European Union Civil Service Tribunal (1-7-2011): &lt;a href="http://curia.europa.eu/jcms/upload/docs/application/pdf/2010-04/rp_14_04_2010_en.pdf"&gt;http://curia.europa.eu/jcms/upload/docs/application/pdf/2010-04/rp_14_04_2010_en.pdf&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+               &lt;br&gt;
+               These concepts are used for the production of reports of cases before the Court and to publish the case-law on the EUR-Lex site: &lt;a href="http://eur-lex.europa.eu/collection/eu-law/eu-case-law.html"&gt;http://eur-lex.europa.eu/collection/eu-law/eu-case-law.html&lt;/a&gt;
+               &lt;br&gt;&lt;br&gt;
+               The concepts are put in alphabetical order. The columns featuring &lt;img src="../../../../shared/img/bg.gif"&gt; can be displayed in descending or ascending order.
+               &lt;br&gt;&lt;br&gt;
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legal proceeding</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ProcjurType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/procjur-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the three different types of legal proceedings at the Court of Justice.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legal proceeding type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Procresult">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/procresult"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               This table presents concepts relating to the results of a case or procedure following the delivery of the decision. They are to be used together with the table of proceedings.
+               &lt;br&gt;&lt;br&gt;
+               More detailed information can be consulted in the Rules of Procedure of these courts, available on the website of the Court of Justice of the European Union:
+               &lt;ul&gt;
+               &lt;li&gt;Rules of Procedure of the Court of Justice (18-6-2013): &lt;a href="http://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/rp_en.pdf"&gt;http://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/rp_en.pdf&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;Rules of Procedure of the General Court (1-7-2013): &lt;a href="http://curia.europa.eu/jcms/upload/docs/application/pdf/2008-09/txt7_2008-09-25_14-08-6_431.pdf"&gt;http://curia.europa.eu/jcms/upload/docs/application/pdf/2008-09/txt7_2008-09-25_14-08-6_431.pdf&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;Rules of Procedure of the European Union Civil Service Tribunal (1-7-2011): &lt;a href="http://curia.europa.eu/jcms/upload/docs/application/pdf/2010-04/rp_14_04_2010_en.pdf"&gt;http://curia.europa.eu/jcms/upload/docs/application/pdf/2010-04/rp_14_04_2010_en.pdf&lt;/a&gt;&lt;/li&gt;
+               &lt;/ul&gt;
+               &lt;br&gt;&lt;br&gt;These concepts are used for the production of reports of cases before the Court and to publish the case-law on the EUR-Lex site: http://eur-lex.europa.eu/collection/eu-law/eu-case-law.html
+               &lt;br&gt;&lt;br&gt;The concepts are put in alphabetical order. The columns featuring &lt;img src="../../../../shared/img/bg.gif"&gt; can be displayed in descending or ascending order.
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legal proceeding result</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ProductForm">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/product-form"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the various product forms published at the Publications office, mainly those related to the general publications.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product form</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#PubTheme">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/pub-theme"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the various themes used for the general publications also available on the EU Bookshop.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Publication theme</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ResourceType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/resource-type"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               This authority table is part of the "Core Metadata". It has been set up in order to harmonize the various types of documents used amongst different systems and, in particular, used in the "Core Metadata and Extension Metadata XML schemas".
+               &lt;br/&gt;&lt;br/&gt;
+               For the "Core Metadata" the table is related to the Events and Corporate bodies (Agent) authority tables.
+               &lt;br/&gt;&lt;br/&gt;
+               The various codes already used in various systems are mapped to the authority code. They are not shown in this HTML presentation, but can be found in the XML or SKOS.
+               &lt;br/&gt;&lt;br/&gt;
+               This table is under the IMMC (Interinstitutionnal Metadata Maintenance Committee) governance. Each concept is presented for approval at the IMMC.
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource type</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Role">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/role"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Roles Named Authority List (NAL) or authority table is a controlled vocabulary listing the roles relevant for the descriptive metadata used at the Publications Office and the core metadata used in the data exchange between the institutions involved in the legal decision-making process.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#RoleNature">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/role-nature"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Role nature NAL provides a list of values used for controlling the attribution of roles.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role nature</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#RoleQualifier">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/role-qualifier"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the quality of the interveners at the Court of Justice.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role qualifier</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Script">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/script"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Script NAL provides a list of distinctive scripts. Each script is instantiated according to a writing system.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Script</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Site">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Location"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/site"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the sites referring to the premises occupied by the various EU institutions and bodies.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Site</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Subdivision">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/subdivision"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the subdivisions of acts used for legal citations.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subdivision</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#SubdivisionPosition">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/subdivision-position"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Subdivision position NAL provides the possible positions in the subdivision of acts. These positions are used in the consolidation exercise.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subdivision position</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#SubjectMatter">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/subject-matter"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               The Subject matter table shows the concepts used for the indexation of notices published on EUR-Lex. The subject matter classification exists in parallel with two other classifications: the Directory of European Union Legislation and EuroVoc. Differently from these, the subject matter classification is aligned strictly to the evolution of European Union policies cited in the different treaties of the European Union that can be consulted at: http://eur-lex.europa.eu/collection/eu-law/treaties.html?locale=en
+               The content of the subject matter classification is managed by the GIL working group (Inter-institutional Group on Legislation).
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subject matter</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#TargetAudience">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides the target audiences used for the general publications.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Target audience</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Timeperiod">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/timeperiod"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Time periods Named Authority List (NAL) is a controlled vocabulary listing the periods of time in the 24 official languages of the EU. The NAL enumerates the names of the seasons, months, weekdays and the main units of time when the issues are published. The NAL is under governance of the Interinstitutional Metadata Maintenance Committee (IMMC) and maintained by the Publications Office of the EU.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Time period</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Treaty">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/treaty"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               The Treaties Named Authority List (NAL) or authority table is a controlled vocabulary listing the different EU treaties with their authority code and labels in the 24 official languages of the EU (when available).
+               The Treaties NAL is part of the Core Metadata (CM) used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the EU.
+               The NAL is under governance of the Interinstitutional Metadata Maintenance Committee (IMMC) and maintained by the Publications Office of the EU in its Metadata Registry (MDR).
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treaty</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#TreatyClassification">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/treaty-classification"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Treaty classification NAL provides the list of types of treaties of the European Union and its predecessors.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treaty classification</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Tu">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/tu"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+               This NTU table is intended to provide a label of each territorial unit of the NUTS (Nomenclature of Territorial Units for Statistics) in the 24 official languages of the European Union with a comparison to the ISO 3166-2 codes.&lt;br/&gt;
+               NUTS was established by Eurostat (Statistical Office of the European Union), in order to provide a single uniform breakdown of territorial units for the production of regional statistics for the European Union. The NUTS nomenclature serves as a reference for the collection, development and harmonization of EU regional statistics and for socio-economic analyses of the regions of the European Union. The region names within each country are in that country's official language(s).&lt;br/&gt;
+               The NUTS-region is based on the existing national administrative subdivisions. There are three levels of NUTS defined: NUTS1, NUTS2 and NUTS3
+               &lt;a href="http://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=DSP_GEN_DESC_VIEW_NOHDR&amp;StrNom=NUTS_33&amp;StrLanguageCode=EN"&gt;http://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=DSP_GEN_DESC_VIEW_NOHDR&amp;StrNom=NUTS_33&amp;StrLanguageCode=EN&lt;/a&gt; &lt;br/&gt;
+               ISO 3166-2 is part of the 3166 standard (International Standard for country codes) published by the International Organization for Standardization. It provides codes for the names of the principal subdivisions (e.g provinces or states) of all countries coded in ISO 3166-1. These codes are based on the two-letter code element from ISO 3166-1 followed by a separator and a further string of up to three alphanumeric characters.&lt;br/&gt;
+               &lt;a href="http://www.iso.org/iso/country_codes/background_on_iso_3166/what_is_iso_3166.htm"&gt;http://www.iso.org/iso/country_codes/background_on_iso_3166/what_is_iso_3166.htm&lt;/a&gt;&lt;br/&gt;
+               An additional link is added to Eurovoc, the European Union's multilingual thesaurus with a comparison to the two first levels of classification.&lt;br/&gt;
+               &lt;a href="http://eurovoc.europa.eu/drupal/?q=request&amp;mturi=http://eurovoc.europa.eu/100278&amp;language=en&amp;view=mt&amp;ifacelang=en"&gt;http://eurovoc.europa.eu/drupal/?q=request&amp;mturi=http://eurovoc.europa.eu/100278&amp;language=en&amp;view=mt&amp;ifacelang=en&lt;/a&gt;
+            </rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Territorial unit</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#UseContext">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf rdf:resource="http://lemon-model.net/lemon#LexicalContext"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use context</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Vocabulary">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:subClassOf rdf:resource="resource/authority/vocabulary"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/vocabulary"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This table provides possible vocabulary types. It has been developed specifically for the EU Open Data Portal.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vocabulary</rdfs:label>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#WritingSystem">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/writing-system"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuVoc 1.1</owl:versionInfo>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Writing system NAL provides the list of the main writing systems. They are differentiated depending on what a symbol represents inside the system.</rdfs:comment>
+      <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Writing system</rdfs:label>
+   </owl:Class>
+</rdf:RDF>

@@ -1,0 +1,17 @@
+# baseURI: http://publications.europa.eu/ontology/euvoc/internalImports
+
+@prefix : <http://publications.europa.eu/ontology/euvoc/internalImports#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://publications.europa.eu/ontology/euvoc/internalImports>
+  rdf:type owl:Ontology ;
+  owl:imports <http://publications.europa.eu/ontology/euvoc/dataTypeDefinitions> ;
+  owl:imports <http://publications.europa.eu/ontology/euvoc/legalDescriptions> ;
+  owl:imports <http://publications.europa.eu/ontology/euvoc/linguisticDescriptions> ;
+  owl:imports <http://publications.europa.eu/ontology/euvoc/spatialDescriptions> ;
+  owl:imports <http://publications.europa.eu/ontology/euvoc/tableDescriptions> ;
+  owl:imports <http://publications.europa.eu/ontology/euvoc/temporalDescriptions> ;
+.
