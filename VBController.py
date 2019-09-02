@@ -210,6 +210,9 @@ def project_creation():
             first = True
             for row in reader:
                 if not first:
+                    
+                    logger.info("Creation of the project : " + row[0])
+                    
                     if _check_if_Project(row[0]):
                         logger.error('the project "'+ row[0] + '" already exists in VocBench')
                         continue
@@ -218,7 +221,7 @@ def project_creation():
                     if (len(row[1].strip()) > 1):
                         base_uri = row[1]
                     else:
-                        base_uri = get_base_uri_from_file(row[14])
+                        base_uri = get_base_uri_from_file(row[15])
                     
                     payload = {'extensionPointID': 'it.uniroma2.art.semanticturkey.extension.extpts.repositoryimplconfigurer.RepositoryImplConfigurer'}
                     r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Extensions/getExtensions?",
@@ -256,9 +259,9 @@ def project_creation():
                     logger.info(r.content)
                     
                     payload = {'consumer':'SYSTEM', 'projectName' : row[0], 'baseURI' : base_uri, 'model' : row[2],
-                   'lexicalizationModel' : row[3], 'historyEnabled' : row[4], 'validationEnabled' : row[5], 'repositoryAccess': row[6],
-                   'coreRepoID' : row[8], 'supportRepoID': row[9] , 'coreRepoSailConfigurerSpecification':row[10],
-                    'supportRepoSailConfigurerSpecification':row[11], 'creationDateProperty': row[12], 'modificationDateProperty': row[13]}
+                    'lexicalizationModel' : row[3], 'historyEnabled' : row[4], 'validationEnabled' : row[5], 'blacklistingEnabled' : row[6],
+                    'repositoryAccess': row[7], 'coreRepoID' : row[9], 'supportRepoID': row[10] , 'coreRepoSailConfigurerSpecification':row[11],
+                    'supportRepoSailConfigurerSpecification':row[12], 'creationDateProperty': row[13], 'modificationDateProperty': row[14]}
                     
                     if (base_uri == ""):
                         logger.error("Error : the base URI of the project is not defined")
@@ -278,32 +281,34 @@ def project_creation():
                     except:
                         logger.info(r.content)
                     
-                    data_path = os.path.join(data_folder, row[14])
+                    data_path = os.path.join(data_folder, row[15])
                     # Add the data if they are available
                     if(os.path.exists(data_path)):
-                        data_upload(row[14], row[0], base_uri)
+                        data_upload(row[15], row[0], base_uri)
 
                     if (_check_if_Project(row[0])):
                         logger.info('The project "' + row[0]+ '" is well created')
                     else:
                         logger.error("The creation of the project " + row[0] + " has failed")
                 
-                    if (row[15] != ""):
-                        if row[15] == "yes":
+                    if (row[16] != ""):
+                        if row[16] == "yes":
                             createForm()
                     
-                    if (row[16].lower() == 'yes'):
+                    if (row[17].lower() == 'yes'):
                         importOntology(row[0])
                         
-                    if (row[17] == "yes"):
+                    if (row[18] == "yes"):
                         _add_standard_export_transformation(base_uri, row[0])
                     
-                    if (row[18] == "yes"):
+                    if (row[19] == "yes"):
                         add_user_to_project()
                         
                     validate_all(row[0])
                     
                     close_project(row[0])
+                    
+                    logger.info("End of the creation of the project : " + row[0])
                 
                 first = False
     return
