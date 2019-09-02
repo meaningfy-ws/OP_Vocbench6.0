@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns="http://publications.europa.eu/resource/authority/label-type/"
+         xmlns:kml="http://www.opengis.net/kml/2.2"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:saxon-ext="http://www.w3.org/2005/xpath-functions"
          xmlns:adms="http://www.w3.org/ns/adms#"
          xmlns:cdm="http://publications.europa.eu/ontology/cdm#"
          xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -30,16 +33,12 @@
          xmlns:sf="http://www.opengis.net/ont/sf#"
          xmlns:locn="http://www.w3.org/ns/locn#"
          xml:base="http://publications.europa.eu/resource/authority/label-type">
-   <owl:Ontology rdf:about="http://publications.europa.eu/resource/authority/label-type">
-      <owl:imports rdf:resource="http://publications.europa.eu/ontology/euvoc"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Label type</rdfs:comment>
-   </owl:Ontology>
    <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/label-type">
       <dct:identifier>http://publications.europa.eu/resource/authority/label-type</dct:identifier>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-13</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-13</euvoc:startDate>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d4e13300">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d4e13303">
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/label-type/STANDARDLABEL"/>
             <skosxl:literalForm xml:lang="en">Label type</skosxl:literalForm>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-13</dct:created>
@@ -48,22 +47,20 @@
       </skosxl:prefLabel>
    </skos:ConceptScheme>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/ABRIDGEDLABEL">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t21">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/12661c9136f16a82f641394415d55285">
             <rdf:value>ABRIDGEDLABEL</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-26</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-26</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t26">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/88eac9be7f9079f70a2805329b09f0d1">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-26</euvoc:startDate>
@@ -71,25 +68,22 @@
             <skosxl:literalForm xml:lang="en">abridged</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/ACRONYM">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t36">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/5194c862becc772e060c37e9b3b2a9c5">
             <rdf:value>ACRONYM</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t41">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/6104ccd334bbe431a3172278b7244882">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
@@ -97,27 +91,24 @@
             <skosxl:literalForm xml:lang="en">acronym</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/ADJECTIVE">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t127">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/9d50324730bd7bff59a0371c9d5ff0f2">
             <rdf:value>ADJECTIVE</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-03-02</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-22</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-16</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t132">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/8f0578c183442e5e3d39253f3610082c">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
@@ -125,25 +116,22 @@
             <skosxl:literalForm xml:lang="en">adjectival</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/ALTERNATIVELABEL">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t82">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/f5cda6bea25351a72b412259bc0e3df2">
             <rdf:value>ALTERNATIVELABEL</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t87">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/27be3d0f22bc18ce6530d60b73288d34">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
@@ -151,27 +139,24 @@
             <skosxl:literalForm xml:lang="en">alternative</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/ATTOLABEL">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t188">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/98e3cb42acb8c25694cca15639d002e4">
             <rdf:value>ATTOLABEL</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-06</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-20</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t193">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/dd81f03cf913afb87159bd4e54a0a0a8">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</euvoc:startDate>
@@ -179,27 +164,24 @@
             <skosxl:literalForm xml:lang="en">ATTO</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/COUNTLABEL">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t142">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/8f925f0299bfe9d876ce500f2abd0e0b">
             <rdf:value>COUNTLABEL</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-26</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-03-02</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-22</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-16</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-26</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t147">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/da0972a25227bde1a49aadf70f2e15af">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-26</euvoc:startDate>
@@ -207,27 +189,24 @@
             <skosxl:literalForm xml:lang="en">count</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/CURRENCYSUBUNIT">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t157">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/8125d872d5be30703a8845127554af82">
             <rdf:value>CURRENCYSUBUNIT</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-03-02</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-22</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-16</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t162">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/127e51d23a87c5fd4e30b1716ddd2a15">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
@@ -235,27 +214,24 @@
             <skosxl:literalForm xml:lang="en">subunit</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/DEMONYM">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t173">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/2fd24f065e06c4f48f522f0472dead89">
             <rdf:value>DEMONYM</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-22</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-06</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-22</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-20</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-22</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t178">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/6c4ba945274b868c62844499d1b32c75">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-22</euvoc:startDate>
@@ -263,27 +239,24 @@
             <skosxl:literalForm xml:lang="en">demonym</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/FORMLABEL">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t203">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/0defbacfbaaae9e51c3983e9686c2679">
             <rdf:value>FORMLABEL</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-06</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-20</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t208">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/81ff2c3aea52c1eacf966036d2be9dc2">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</euvoc:startDate>
@@ -291,25 +264,22 @@
             <skosxl:literalForm xml:lang="en">form</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/LONGLABEL">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t51">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/6a435444b32a9d0c75bc8c71ddaa7f72">
             <rdf:value>LONGLABEL</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t56">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/2da617e909685287a9282368ebafe5da">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
@@ -317,25 +287,22 @@
             <skosxl:literalForm xml:lang="en">long</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/OFFICIALLABEL">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t66">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/8418608a06a0469932a358b367dc9fb9">
             <rdf:value>OFFICIALLABEL</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t71">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/33f90dd26ac82d90793826702e5d714a">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
@@ -343,25 +310,22 @@
             <skosxl:literalForm xml:lang="en">official</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/ORIGINALLABEL">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t97">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/448960b5899f4cae6f8946967fb5dc66">
             <rdf:value>ORIGINALLABEL</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t102">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/12807e9187f4e4cebd9605b18b2cdbab">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
@@ -369,25 +333,22 @@
             <skosxl:literalForm xml:lang="en">original</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/SHORTLABEL">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t6">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/7e59b6e87670fe515d3eb5ddf8f7c2c5">
             <rdf:value>SHORTLABEL</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t11">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/bb15a0b0cd90d79870d456ce5dcd75e6">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
@@ -395,25 +356,22 @@
             <skosxl:literalForm xml:lang="en">short</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/label-type/STANDARDLABEL">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t112">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/label-type/fc543cf3158a5bb7910bf30c678b9447">
             <rdf:value>STANDARDLABEL</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/d1t117">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/label-type/42f6871530d09f9b692ed7a17c2149d8">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-10</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
@@ -421,6 +379,5 @@
             <skosxl:literalForm xml:lang="en">preferred</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <!--in template name="specific-part-invariant"-->
    </skos:Concept>
 </rdf:RDF>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns="http://publications.europa.eu/resource/authority/use-context/"
+         xmlns:kml="http://www.opengis.net/kml/2.2"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:saxon-ext="http://www.w3.org/2005/xpath-functions"
          xmlns:adms="http://www.w3.org/ns/adms#"
          xmlns:cdm="http://publications.europa.eu/ontology/cdm#"
          xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -30,16 +33,12 @@
          xmlns:sf="http://www.opengis.net/ont/sf#"
          xmlns:locn="http://www.w3.org/ns/locn#"
          xml:base="http://publications.europa.eu/resource/authority/use-context">
-   <owl:Ontology rdf:about="http://publications.europa.eu/resource/authority/use-context">
-      <owl:imports rdf:resource="http://publications.europa.eu/ontology/euvoc"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Use context</rdfs:comment>
-   </owl:Ontology>
    <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/use-context">
       <dct:identifier>http://publications.europa.eu/resource/authority/use-context</dct:identifier>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-13</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-13</euvoc:startDate>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d4e20293">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d4e20298">
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/label-type/STANDARDLABEL"/>
             <skosxl:literalForm xml:lang="en">Use context</skosxl:literalForm>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-13</dct:created>
@@ -48,24 +47,22 @@
       </skosxl:prefLabel>
    </skos:ConceptScheme>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/CELLAR">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t6">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/9cf442d3ab2cf8f769fbaf67377c9060">
             <rdf:value>CELLAR</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t11">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/66bfbdb833bacd569b57495a9d64edb8">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -73,36 +70,33 @@
             <skosxl:literalForm xml:lang="en">CELLAR</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t22">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/71c193081e5b5fc6bdd440873f784dd1">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by CELLAR, the common content and metadata repository of the Publications Office.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/CJ">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t624">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/1f29226e60d8cefeb0d2a5a9f9881f64">
             <rdf:value>CJ</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-06-10</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-06-06</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-06-10</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t629">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/313c1ec1c2274954092234c8b3cbb211">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-06-10</euvoc:startDate>
@@ -110,36 +104,67 @@
             <skosxl:literalForm xml:lang="en">CJ</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t640">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/59726958e02fe01ed77d26922132f100">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in the Subdivision authority table for filtering concepts used by the Court of Justice.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-06-10</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/CODIF_DATA">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/cde05919f78ab42c9340e2ffd03d2d6a">
+            <rdf:value>CODIF_DATA</rdf:value>
+            <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
+            <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-21</dct:created>
+            <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-19</euvoc:startDate>
+         </euvoc:XlNotation>
+      </skos:notation>
+      <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
+      <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
+      <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-04</dct:dateAccepted>
+      <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-21</dct:created>
+      <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</dct:dateSubmitted>
+      <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-19</euvoc:startDate>
+      <skosxl:prefLabel>
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/2d0a65c125615278cea7e79f19addadc">
+            <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+            <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-21</dct:created>
+            <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-19</euvoc:startDate>
+            <dct:type rdf:resource="http://publications.europa.eu/resource/authority/label-type/STANDARDLABEL"/>
+            <skosxl:literalForm xml:lang="en">Codification Data</skosxl:literalForm>
+         </skosxl:Label>
+      </skosxl:prefLabel>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/01e1485bc72aa58b1c461fc6bf7de856">
+            <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+            <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-21</dct:created>
+            <rdf:value xml:lang="en">Use context in several authority tables for codifying concepts in TED portal expert search and used in TED Schema (CODIF_DATA).</rdf:value>
+            <dct:source xml:lang="en">OP</dct:source>
+            <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-19</euvoc:startDate>
+         </rdf:Description>
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/COMREF">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t33">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/20a0ccb457b5424e27db504669d265ec">
             <rdf:value>COMREF</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t38">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/116e1a6be49aa6b0d6f079d9f7202f5f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -147,36 +172,33 @@
             <skosxl:literalForm xml:lang="en">COMREF</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t49">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/f4963287eeeb8cbb355bbc21d0d5d857">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by COMREF, the European Commission's Human Resources Database.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/DCAT_AP">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t60">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/e978fff0251f7063c0d4785c478d895c">
             <rdf:value>DCAT_AP</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t65">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/a083623fccf46769a1d4c11ad2ae881f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -184,36 +206,33 @@
             <skosxl:literalForm xml:lang="en">DCAT_AP</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t76">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/3177e23d9e429aca8181f0962dba386b">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
-            <rdf:value xml:lang="en">Use context in the Dataset type authority table for filtering concepts used by DCAT-AP, an application profile based on the Data Catalogue vocabulary.</rdf:value>
+            <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by DCAT-AP, an application profile based on the Data Catalogue vocabulary designed to facilitate interoperability between EU and European data catalogues published on the Web.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/DEMED">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t87">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/63e4c5e6c87558bc62dad76ac6625b45">
             <rdf:value>DEMED</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t92">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/f0226b13fa89fc3b4ad447276d4699ea">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -221,36 +240,33 @@
             <skosxl:literalForm xml:lang="en">DEMED</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t103">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/3945401a4cfa70e80a3debd2ed7cd5f2">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in the Corporate body authority table for filtering concepts used by DEMED, the Demande Edition application.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/DEMPUB">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t769">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/daaf11b9203e21d35b6fd04fe3ac9f1e">
             <rdf:value>DEMPUB</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-29</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-26</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-12</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-29</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-29</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-26</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t774">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/2bf140264fe6ba87a01d9ab68a829259">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-29</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-26</euvoc:startDate>
@@ -258,36 +274,67 @@
             <skosxl:literalForm xml:lang="en">Publication request</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t785">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/93925dbbed9738f55881f88f607a1e27">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-29</dct:created>
             <rdf:value xml:lang="en">Use context in the Corporate body authority table for filtering concepts used by services of the Publications Office.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-26</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/EFORMS">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/8dabd458a2d50e19614cfda7b2bddfc1">
+            <rdf:value>EFORMS</rdf:value>
+            <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
+            <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</dct:created>
+            <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
+         </euvoc:XlNotation>
+      </skos:notation>
+      <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
+      <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
+      <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-04</dct:dateAccepted>
+      <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</dct:created>
+      <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</dct:dateSubmitted>
+      <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
+      <skosxl:prefLabel>
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/359fbb8d01fa8688ebca3db66479b328">
+            <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+            <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</dct:created>
+            <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
+            <dct:type rdf:resource="http://publications.europa.eu/resource/authority/label-type/STANDARDLABEL"/>
+            <skosxl:literalForm xml:lang="en">eForms</skosxl:literalForm>
+         </skosxl:Label>
+      </skosxl:prefLabel>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/20104fd625dc121a587e8139db000d29">
+            <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+            <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</dct:created>
+            <rdf:value xml:lang="en">Use context in several authority tables for identifying concepts used in eForms.</rdf:value>
+            <dct:source xml:lang="en">OP</dct:source>
+            <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
+         </rdf:Description>
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/EUBOOKSHOP">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t114">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/37f196c73ff0b9676b2fa94a5efa3b26">
             <rdf:value>EUBOOKSHOP</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t119">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/0cd792ffe63718c92d6760b07a6e5b35">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -295,36 +342,33 @@
             <skosxl:literalForm xml:lang="en">EU Bookshop</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t130">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/bb7339d96583a9407c59025ea774b477">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by EU Bookshop.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/EUDOR">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t142">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/dd2372c77ef971f9ee1787f2a7578596">
             <rdf:value>EUDOR</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t147">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/6b396df2a79babc8055862cdc960984a">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -332,36 +376,33 @@
             <skosxl:literalForm xml:lang="en">EUDOR</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t158">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/aa2585618bca2c399fafe646a2414acc">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in the Language authority table for filtering concepts used by EUDOR, the European Union Document Repository which is the long-term digital archive of the EU institutions managed by the Publications Office.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/EURLEX">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t169">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/020d5f145c4703401eb0911507299545">
             <rdf:value>EURLEX</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t174">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/ae2a72b4e22b98bc6f48c1fab7d15dca">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -369,43 +410,40 @@
             <skosxl:literalForm xml:lang="en">EurLex</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlChangeNote>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t185">
+      <skos:changeNote>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/64045e2265014dd671ce781ff278cc17">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <rdf:value xml:lang="en">EUDOR covers also "ARCHIVE", this concept has been deleted, 21/01/2015</rdf:value>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlChangeNote>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t194">
+      </skos:changeNote>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/1966decbd7f12e7c60626fc42ad28530">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by EurLex domain in ATTO (Atelier des Tables de Traductions de l’Office des publications).</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/EU_OMR_OCT">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t570">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/146fd59bfb27c05a45cacb509b84d382">
             <rdf:value>EU_OMR_OCT</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-21</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-06</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-20</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-21</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t575">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/da87c5f23249da4a7de5ecca6a2014a1">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-21</euvoc:startDate>
@@ -413,36 +451,33 @@
             <skosxl:literalForm xml:lang="en">EU_OMR_OCT</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t586">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/4315264fd01fe29cac88789775f713bc">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</dct:created>
             <rdf:value xml:lang="en">Use context in the Country authority table for filtering outermost regions (OMR) and overseas countries and territories (OCT) associated to the European Union.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-21</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/EU_REC">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t516">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/1524ebbf2e5de12c4ba7fc13dc792775">
             <rdf:value>EU_REC</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-10-31</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-05-25</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-11-29</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-10-31</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-11-15</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-05-25</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t521">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/6d1c9aa546a80bb5349e28046483ad98">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-10-31</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-05-25</euvoc:startDate>
@@ -450,36 +485,33 @@
             <skosxl:literalForm xml:lang="en">EU_REC</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t532">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/a0788e89a510a3a1b63a703d65e43293">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-10-31</dct:created>
             <rdf:value xml:lang="en">Use context used in the Country authority table to distinguish countries which exist and are recognized by EU Member States from territories or from countries which do not exist any more.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-05-25</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/FORMEX">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t651">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/b48e8a5347eb3372ea178da60f173f44">
             <rdf:value>FORMEX</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-06-10</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-06-06</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-06-10</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t656">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/6f087afe9ec34477dfac4e8a619d4109">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-06-10</euvoc:startDate>
@@ -487,36 +519,33 @@
             <skosxl:literalForm xml:lang="en">FORMEX</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t667">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/1614514e35a95fe17b8d7617c592a058">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in the Subdivision authority table for filtering concepts used by FORMEX, the Formalized Exchange of Electronic Publications.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-06-10</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/ID_ENTITY">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t709">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/49a19f4dfa888a91fe69d5e22d99f80b">
             <rdf:value>ID_ENTITY</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-06</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-06-06</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-25</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t714">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/de606cd31eb076c2804638e5e825cdd0">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-06</euvoc:startDate>
@@ -524,18 +553,17 @@
             <skosxl:literalForm xml:lang="en">Organisational entity ID</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t728">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/b89bf9e9a64d85f15f7f69f3969eea89">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-25</dct:created>
             <rdf:value xml:lang="en">Identifier used for organisational entities by EU Whoiswho, the electronic directory of managers and services in the EU institutions, bodies and agencies.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-06</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-temporary"-->
+      </skos:definition>
       <skosxl:altLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t458">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/2f09b2ef41d8cd6d33da397af3af7956">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-01</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -545,19 +573,17 @@
             <skosxl:literalForm xml:lang="en">WHOISWHO_entity_id</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:altLabel>
-      <euvoc:xlChangeNote>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t476">
+      <skos:changeNote>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/000da39f04816511db421860426efb5e">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <rdf:value xml:lang="en">requested by Jean Delahousse on 05/05/2015</rdf:value>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-06</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlChangeNote>
-      <!--in template name="specific-part-invariant"-->
+      </skos:changeNote>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/ID_INSTITUTION">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t484">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/f7f8701c5f654679a11a8f1a35b25da3">
             <rdf:value>ID_INSTITUTION</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-01</dct:created>
@@ -565,7 +591,7 @@
             <euvoc:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-05</euvoc:endDate>
             <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-09</dct:dateAccepted>
@@ -574,9 +600,8 @@
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
       <euvoc:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-05</euvoc:endDate>
       <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t489">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/ee42301a7420f6be3c165e5b64c12871">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-01</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -587,36 +612,33 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <dct:isReplacedBy rdf:resource="http://publications.europa.eu/resource/authority/use-context/INSTITUTION"/>
-      <euvoc:xlChangeNote>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t507">
+      <skos:changeNote>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/66d79e95a489aa0dcb8c785b0b7084d4">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <rdf:value xml:lang="en">requested by Jean Delahousse on 05/05/2015</rdf:value>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
             <euvoc:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-05</euvoc:endDate>
             <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
          </rdf:Description>
-      </euvoc:xlChangeNote>
-      <!--in template name="specific-part-invariant"-->
+      </skos:changeNote>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/IMMC">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t205">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/a7a8e28c6bcdd3d178d507c48da0b359">
             <rdf:value>IMMC</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t210">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/1cad2a21f2f98c219ec45c9fb71745c6">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -624,36 +646,33 @@
             <skosxl:literalForm xml:lang="en">IMMC</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t221">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/909736f1e399fa0a70ee8a59fc4e3bb5">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by IMMC, the Interinstitutional Metadata Maintenance Committee.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/IMMC_COM">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t823">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/f227dff4276092c3f49e0f987dbb3eac">
             <rdf:value>IMMC_COM</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-07</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t828">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/e13552147272e1320fa5035962e1328d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
@@ -661,36 +680,33 @@
             <skosxl:literalForm xml:lang="en">IMMC_COM</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t839">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/08443ae2daf1bf12442956da11964fb2">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by IMMC, the Interinstitutional Metadata Maintenance Committee, and relevant for the European Commission.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/IMMC_CONSIL">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t959">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/f51b48c3d60801acf102694814dda72c">
             <rdf:value>IMMC_CONSIL</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-07</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t964">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/92bbc3f32bf590a3b33c2e2741795cb0">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
@@ -698,36 +714,33 @@
             <skosxl:literalForm xml:lang="en">IMMC_CONSIL</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t975">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/dfeb580b01800ab5606cc7f3be98ba6d">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by IMMC, the Interinstitutional Metadata Maintenance Committee, and relevant for the Council of the European Union.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/IMMC_COR">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t878">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/233c466188988e14d2ffcb6913e25b96">
             <rdf:value>IMMC_COR</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-07</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t883">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/8c819ad66cdc217aa20209a4b87ca35a">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
@@ -735,36 +748,33 @@
             <skosxl:literalForm xml:lang="en">IMMC_COR</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t894">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/a377f1dce723cc5342ecd07e6010c093">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by IMMC, the Interinstitutional Metadata Maintenance Committee, and relevant for the European Committee of the Regions.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/IMMC_CURIA">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t986">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/13e76265e9cc8acbde0649d76223fa5f">
             <rdf:value>IMMC_CURIA</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-07</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t991">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/7f14f310bc8cea0f55a3fa03cd33c8e3">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
@@ -772,36 +782,33 @@
             <skosxl:literalForm xml:lang="en">IMMC_CURIA</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t1002">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/e1fb558f1fbc038a98fb34a337561671">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by IMMC, the Interinstitutional Metadata Maintenance Committee, and relevant for the Court of Justice of the European Union.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/IMMC_ECA">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t851">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/1bd862e936b25f622ad4192994df36fe">
             <rdf:value>IMMC_ECA</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-07</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t856">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/34b6d8e0749a6bfa0d7987fd44662ffb">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
@@ -809,36 +816,33 @@
             <skosxl:literalForm xml:lang="en">IMMC_ECA</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t867">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/a80e23710149f3fbae7d2153171b1e8b">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by IMMC, the Interinstitutional Metadata Maintenance Committee, and relevant for the European Court of Auditors.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/IMMC_EESC">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t905">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/546d4214c4a155ac53ff23a33d87cac1">
             <rdf:value>IMMC_EESC</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-07</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t910">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/ea3a4a9be68f04539aa7efe8a77e4c2e">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
@@ -846,36 +850,33 @@
             <skosxl:literalForm xml:lang="en">IMMC_EESC</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t921">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/aad9a5755df8a1b256f52297b83386cf">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by IMMC, the Interinstitutional Metadata Maintenance Committee, and relevant for the European Economic and Social Committee.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/IMMC_EP">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t932">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/c82963bf6531d6cdd98ca253e3c15924">
             <rdf:value>IMMC_EP</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-07</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t937">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/1c668515bae4b5eb0b387b6dc21205ab">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
@@ -883,36 +884,33 @@
             <skosxl:literalForm xml:lang="en">IMMC_EP</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t948">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/3678f4dfab6dc654d9e3e08a95aaaffb">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-24</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by IMMC, the Interinstitutional Metadata Maintenance Committee, and relevant for the European Parliament.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-20</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/INSTITUTION">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t739">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/5373037618027cba12c3a1285d4ba70a">
             <rdf:value>INSTITUTION</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-06</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-06-06</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-25</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-06</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t744">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/c323a6f0f47be1217405b8af02b84bce">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-06</euvoc:startDate>
@@ -920,36 +918,33 @@
             <skosxl:literalForm xml:lang="en">Institution URI</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t758">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/a502b3605f9408328b02036e87eedb4c">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-25</dct:created>
             <rdf:value xml:lang="en">Uniform resource identifier (URI) used for institutions by EU Whoiswho, the electronic directory of managers and services in the EU institutions, bodies and agencies.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-06</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/MNEMONIC">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t679">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/7aa2e88b5e8bff2bd16569678a393b5f">
             <rdf:value>MNEMONIC</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-06</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-06-06</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-25</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t684">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/45038002baf8032e61d0ee7e03d272df">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-06</euvoc:startDate>
@@ -957,18 +952,17 @@
             <skosxl:literalForm xml:lang="en">Organisational entity mnemonic code</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t698">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/99afa71a1b1ab267aea7607e12ac38ef">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-25</dct:created>
             <rdf:value xml:lang="en">Mnemonic code used for organisational entities by EU Whoiswho, the electronic directory of managers and services in the EU institutions, bodies and agencies.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-06</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-temporary"-->
+      </skos:definition>
       <skosxl:altLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t427">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/a937fcbfed75a045253fa7d01256f312">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-01</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -978,34 +972,65 @@
             <skosxl:literalForm xml:lang="en">WHOISWHO_mnemonic</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:altLabel>
-      <euvoc:xlChangeNote>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t445">
+      <skos:changeNote>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/7986edbf3a038d3185ce0c77fc4c3438">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <rdf:value xml:lang="en">requested by Jean Delahousse on 05/05/2015</rdf:value>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-06</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlChangeNote>
-      <!--in template name="specific-part-invariant"-->
+      </skos:changeNote>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/NOTICE_VIEWER">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/81588d2b619fd03c1a2ee05615c0806b">
+            <rdf:value>NOTICE_VIEWER</rdf:value>
+            <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
+            <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-21</dct:created>
+            <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-19</euvoc:startDate>
+         </euvoc:XlNotation>
+      </skos:notation>
+      <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
+      <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
+      <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-04</dct:dateAccepted>
+      <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-21</dct:created>
+      <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</dct:dateSubmitted>
+      <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-19</euvoc:startDate>
+      <skosxl:prefLabel>
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/45b4c5ecf1f4750e5f5dcd378c0924d1">
+            <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+            <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-21</dct:created>
+            <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-19</euvoc:startDate>
+            <dct:type rdf:resource="http://publications.europa.eu/resource/authority/label-type/STANDARDLABEL"/>
+            <skosxl:literalForm xml:lang="en">Notice Viewer</skosxl:literalForm>
+         </skosxl:Label>
+      </skosxl:prefLabel>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/5d52306f36e284f4bf321f5ba261fa22">
+            <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+            <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-21</dct:created>
+            <rdf:value xml:lang="en">Use context in several authority tables for viewing concepts in eProcurement Notices.</rdf:value>
+            <dct:source xml:lang="en">OP</dct:source>
+            <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-19</euvoc:startDate>
+         </rdf:Description>
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/ODP">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t232">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/a12b171abc221081a5dd6955425c7880">
             <rdf:value>ODP</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t237">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/115dfb8cc8d01be25718af587f7a0683">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -1013,36 +1038,33 @@
             <skosxl:literalForm xml:lang="en">ODP</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t248">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/97de00d96c5cef15d296691fc61abb8f">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by ODP, the European Union Open Data Portal.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/OJ">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t259">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/8af6b83004c35269dc1e9e760b7c6704">
             <rdf:value>OJ</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t264">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/8264b3ce21e2ac7edabb3575e2c2a269">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -1050,36 +1072,33 @@
             <skosxl:literalForm xml:lang="en">OJ</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t275">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/e614e16e8a999b654e83c01d8755b6c3">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by the Official Journal of the European Union.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/OJEEP">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t543">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/b04a204997bb728af5e8194c317063b0">
             <rdf:value>OJEEP</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-10-31</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-12-12</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-11-29</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-10-31</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-11-15</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-12-12</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t548">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/df98ba543dcca089dfc3c902922b1e21">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-10-31</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-12-12</euvoc:startDate>
@@ -1087,36 +1106,33 @@
             <skosxl:literalForm xml:lang="en">OJEEP</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t559">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/46df800ccb890a55f6b4a97b430273e3">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-10-31</dct:created>
             <rdf:value xml:lang="en">Use context in the File type authority table for filtering concepts used by OJEEP, the Official Journal Electronic Exchange Protocol which is a protocol used for exchange of information between the contractors and the Publications Office. The protocol is based on an XML schema and defines naming conventions and content of the packages exchanged between the systems.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-12-12</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/PLANPUBLI">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t286">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/73529d7a34b2706470e1c792ce5514a1">
             <rdf:value>PLANPUBLI</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t291">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/01496e3efe15663ad634cbf31c5db5ba">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -1124,43 +1140,40 @@
             <skosxl:literalForm xml:lang="en">PlanPubli</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlChangeNote>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t302">
+      <skos:changeNote>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/ffbf6c88c8b9269a03efe0547d65bc54">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <rdf:value xml:lang="en">OJ covers also "OJEEP", this concept has been deleted, 21/01/2015</rdf:value>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlChangeNote>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t311">
+      </skos:changeNote>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/9f77f52a539f9b06596196bb4fc4c773">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in the Multilingual authority table for filtering concepts used by PlanPubli, the workflow application of general publications at the Publications Office.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/PUB">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t323">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/4a901fe4c4f1c2b440059b11853497d7">
             <rdf:value>PUB</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t328">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/036f69cf36bf6fa3b046b211bcb396b2">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -1168,36 +1181,33 @@
             <skosxl:literalForm xml:lang="en">PUB</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t339">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/220aa1b4795b2fc8b4c0ec329012e972">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by Publications domain in ATTO (Atelier des Tables de Traductions de l’Office des publications).</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/PUB_CORP">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t597">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/8ce129251e214848625fb220bd86ca5c">
             <rdf:value>PUB_CORP</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-06-06</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-23</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t602">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/4f7fe2d6b5a1ffaf8cc455b664da6b21">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
@@ -1205,36 +1215,33 @@
             <skosxl:literalForm xml:lang="en">PUB_CORP</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t613">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/373db11469dde2f98a93e2a38345bdb8">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in the Corporate body authority table for filtering concepts used by PUB_CORP table of Publications domain in ATTO (Atelier des Tables de Traductions de l’Office des publications).</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-05</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/TED">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t350">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/415a97bf431af5ad39bb705be3c00b80">
             <rdf:value>TED</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t355">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/c94b58be53cc21ce2f9e66b008a433af">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -1242,43 +1249,40 @@
             <skosxl:literalForm xml:lang="en">TED</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlChangeNote>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t366">
+      <skos:changeNote>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/1e5a2b2b832b81c57304635c32fc0f15">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <rdf:value xml:lang="en">PUB covers also "PUB_CORP", this concept has been deleted, 21/01/2015</rdf:value>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlChangeNote>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t375">
+      </skos:changeNote>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/70885b6679dd5b8f231befffcdd327b0">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
-            <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by TED (tenders electronic daily) portal.</rdf:value>
+            <rdf:value xml:lang="en">Use context in several authority tables for displaying concepts on the TED (tenders electronic daily) portal search mask.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/TED_SCHEMA">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t796">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/e41ac5fee6bfcd466b845766e1b7e654">
             <rdf:value>TED_SCHEMA</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-07</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-26</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-12</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-07</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-29</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-26</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t801">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/19c745d0cd58bb4395e11eb036062d94">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-07</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-26</euvoc:startDate>
@@ -1286,36 +1290,33 @@
             <skosxl:literalForm xml:lang="en">TED Schema</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t812">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/c93b279a800c33ad45b954b5a12b0af4">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-07</dct:created>
-            <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used by TED (tenders electronic daily) Schema.</rdf:value>
+            <rdf:value xml:lang="en">Use context in several authority tables for identifying concepts used in TED Schema (FORM_SECTION).</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-26</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/use-context/WHOISWHO">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t386">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/use-context/ffb81791aa211a9c4fb2843fd44d4953">
             <rdf:value>WHOISWHO</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-09</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t391">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/use-context/584d9b268122420a8e7999f31fd94d03">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-20</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
@@ -1323,22 +1324,21 @@
             <skosxl:literalForm xml:lang="en">WHOISWHO</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlChangeNote>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t402">
+      <skos:changeNote>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/4080dc418822fc1faba4f28c9a1b4a66">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <rdf:value xml:lang="en">WHOISWHO covers also "ANNINTER"', this concept has been deleted after confirmation from Xavier Desurmont, 21/01/2015</rdf:value>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlChangeNote>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/d1t411">
+      </skos:changeNote>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context/7c18860e276fed3111b52972aa8f1241">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-05-22</dct:created>
             <rdf:value xml:lang="en">Use context in several authority tables for filtering concepts used in EU Whoiswho, the electronic directory of managers and services in the EU institutions, bodies and agencies.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-12-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
 </rdf:RDF>

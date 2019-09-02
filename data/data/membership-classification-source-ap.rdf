@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns="http://publications.europa.eu/resource/authority/membership-classification/"
+         xmlns:kml="http://www.opengis.net/kml/2.2"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:saxon-ext="http://www.w3.org/2005/xpath-functions"
          xmlns:adms="http://www.w3.org/ns/adms#"
          xmlns:cdm="http://publications.europa.eu/ontology/cdm#"
          xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -30,16 +33,12 @@
          xmlns:sf="http://www.opengis.net/ont/sf#"
          xmlns:locn="http://www.w3.org/ns/locn#"
          xml:base="http://publications.europa.eu/resource/authority/membership-classification">
-   <owl:Ontology rdf:about="http://publications.europa.eu/resource/authority/membership-classification">
-      <owl:imports rdf:resource="http://publications.europa.eu/ontology/euvoc"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Membership classification</rdfs:comment>
-   </owl:Ontology>
    <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/membership-classification">
       <dct:identifier>http://publications.europa.eu/resource/authority/membership-classification</dct:identifier>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-15</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-15</euvoc:startDate>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d4e23243">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d4e23248">
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/label-type/STANDARDLABEL"/>
             <skosxl:literalForm xml:lang="en">Membership classification</skosxl:literalForm>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-15</dct:created>
@@ -48,24 +47,22 @@
       </skosxl:prefLabel>
    </skos:ConceptScheme>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/membership-classification/EEA">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#MembershipClassification"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t60">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/membership-classification/a7e68268b52fae7b4f43d35bf10efdc3">
             <rdf:value>EEA</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1994-01-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-27</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-27</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1994-01-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t65">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/3eeae357c391b5b422f0c1c2c250bdd5">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1994-01-01</euvoc:startDate>
@@ -73,36 +70,33 @@
             <skosxl:literalForm xml:lang="en">European Economic Area</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t73">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/membership-classification/be3fd530bf015a205123dab4d0faad79">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
             <rdf:value xml:lang="en">The European Economic Area (EEA) brings together the EU Member States and three of the EFTA States. It was established by the EEA Agreement, an international agreement which enables these three EFTA States to participate fully in the Single Market. It covers the four freedoms, i.e. the free movement of goods, capital, services and persons, plus competition and state aid rules and horizontal areas related to the four freedoms.</rdf:value>
             <dct:source xml:lang="en">European Free Trade Association</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1994-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/membership-classification/EFTA">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#MembershipClassification"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t33">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/membership-classification/f9f9b1ab936806a946b464377fb3772d">
             <rdf:value>EFTA</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-01-04</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-27</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-27</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-01-04</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t38">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/c73dacb003c5927e0e3d2baa1e11ad62">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-01-04</euvoc:startDate>
@@ -110,36 +104,33 @@
             <skosxl:literalForm xml:lang="en">European Free Trade Association</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t46">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d3a584f119c552c5f8e62443bf75bda5">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
             <rdf:value xml:lang="en">The European Free Trade Association (EFTA) is an intergovernmental organisation set up for the promotion of free trade and economic integration to the benefit of its Member States. The Association manages the EFTA Convention; EFTA’s worldwide network of free trade and partnership agreements, and the European Economic Area Agreement.</rdf:value>
             <dct:source xml:lang="en">European Free Trade Association</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-01-04</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/membership-classification/EU">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#MembershipClassification"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t6">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/membership-classification/a08eb936cdab5717c4476c436f12b8ba">
             <rdf:value>EU</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1951-01-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-27</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-27</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1951-01-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t11">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/3e0260f39adf0478b71d5eb3271aebfc">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1951-01-01</euvoc:startDate>
@@ -147,36 +138,33 @@
             <skosxl:literalForm xml:lang="en">European Union</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t19">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/membership-classification/ff1afe16d06e3854861d5de7bf6d9afc">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
             <rdf:value xml:lang="en">The European Union (EU) is both a political project and a legal organisation. It takes action in many areas affecting the daily lives of European citizens. Its policies are implemented in accordance with the rules and procedures set out in a series of Treaties.</rdf:value>
             <dct:source xml:lang="en">Summaries of EU legislation</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1951-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/membership-classification/EURO">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#MembershipClassification"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t142">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/membership-classification/f15c04cd7d1ae5f2a2b08abb7d59b04d">
             <rdf:value>EURO</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-06</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-28</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-06</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-14</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t147">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/884a13a45134326fb9eba027b965da64">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-06</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -184,36 +172,33 @@
             <skosxl:literalForm xml:lang="en">Euro area</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t155">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/membership-classification/b5cf5bb68f30aec3bbd1a181471a4a33">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-06</dct:created>
             <rdf:value xml:lang="en">The euro area (or eurozone) is the monetary union of EU Member States which have adopted euro as common currency.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/membership-classification/OTHER">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#MembershipClassification"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t87">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/membership-classification/3b975667af01cd77aaa55cf79513d88f">
             <rdf:value>OTHER</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1951-01-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-27</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-27</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1951-01-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t92">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/15bb8397ef348c97e3c7f0d023bb2dfc">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1951-01-01</euvoc:startDate>
@@ -221,36 +206,33 @@
             <skosxl:literalForm xml:lang="en">Other</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t100">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/membership-classification/88e6f4271fa0ae437ccd2003fab4f9c4">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-16</dct:created>
             <rdf:value xml:lang="en">Code to be assigned when a concept cannot be specifically identified by any of the other types of membership.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1951-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/membership-classification/SCHENGEN">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#MembershipClassification"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t114">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/membership-classification/3176625f6653d2a13130c3aad5ed2b7a">
             <rdf:value>SCHENGEN</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-06</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-03-26</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/membership-classification"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-28</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-06</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-14</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-03-26</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t119">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/membership-classification/0054100b877b1925c873db6f5eb2a31d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-06</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-03-26</euvoc:startDate>
@@ -258,15 +240,14 @@
             <skosxl:literalForm xml:lang="en">Schengen area</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/membership-classification/d1t127">
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/membership-classification/30cf6a2fc79c8a53fe5340e861abe324">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-06</dct:created>
             <rdf:value xml:lang="en">The Schengen area is an area comprising European countries which have acknowledged the abolishment of their internal borders with other member countries and outside, for the free and unrestricted movement of people, goods, services, and capital, in harmony with common rules for controlling external borders and fighting criminality by strengthening common judicial system and police cooperation.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-03-26</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
    </skos:Concept>
 </rdf:RDF>

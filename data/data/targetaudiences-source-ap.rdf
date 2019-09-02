@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns="http://publications.europa.eu/resource/authority/target-audience/"
+         xmlns:kml="http://www.opengis.net/kml/2.2"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:saxon-ext="http://www.w3.org/2005/xpath-functions"
          xmlns:adms="http://www.w3.org/ns/adms#"
          xmlns:cdm="http://publications.europa.eu/ontology/cdm#"
          xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -30,16 +33,12 @@
          xmlns:sf="http://www.opengis.net/ont/sf#"
          xmlns:locn="http://www.w3.org/ns/locn#"
          xml:base="http://publications.europa.eu/resource/authority/target-audience">
-   <owl:Ontology rdf:about="http://publications.europa.eu/resource/authority/target-audience">
-      <owl:imports rdf:resource="http://publications.europa.eu/ontology/euvoc"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Target audience</rdfs:comment>
-   </owl:Ontology>
    <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/target-audience">
       <dct:identifier>http://publications.europa.eu/resource/authority/target-audience</dct:identifier>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-08-03</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-08-03</euvoc:startDate>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d4e19579">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d4e19584">
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/label-type/STANDARDLABEL"/>
             <skosxl:literalForm xml:lang="en">Target audience</skosxl:literalForm>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-08-03</dct:created>
@@ -48,24 +47,22 @@
       </skosxl:prefLabel>
    </skos:ConceptScheme>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/target-audience/CHL">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#TargetAudience"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t911">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/5d3d32793887d400895552c019dc568b">
             <rdf:value>CHL</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <dct:dateAccepted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-11-20</dct:dateAccepted>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
       <dct:dateSubmitted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-11-13</dct:dateSubmitted>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t916">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/326ef65c3cce54218dd1afe60c7f4922">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -75,7 +72,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t919">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/c26cac357305909e8f0d7d3ad261952f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -84,7 +81,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t922">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/ddd8bf575d3011fb0a16f00758604cec">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -93,7 +90,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t925">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/01527e2fb41e526653cd9bf38b58f248">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -102,7 +99,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t928">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/0b23b9d101d46e20069a374db3652986">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -112,7 +109,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t932">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/b62a25d5f9903302b58a41a7d4baedbd">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -121,7 +118,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t935">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/4a06561a776d039810a693d05c9a69f1">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -130,7 +127,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t938">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/bdcc4f8435c758492a870086f430dd2c">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -139,7 +136,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t941">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/8f40e57fd067fa89c096ddc65b8eba05">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -148,7 +145,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t944">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/f9247a6341723ddc67395b5e3d9c0f04">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -157,7 +154,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t947">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/3bf2967c92a6e77bc6661ecd1f5b86eb">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -166,7 +163,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t951">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/364f5cb85d7f218f94fcc493f5d6ac96">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -175,7 +172,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t954">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/52ca07c0ae0b49396f84eaadb583c46f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -184,7 +181,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t957">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/ea8b299812c797da242ce8a3e39009a0">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -193,7 +190,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t960">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/1d47f13adcb4ea057a62484a0de4b847">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -202,7 +199,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t963">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/fee14308b34394237f0289829537e849">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -211,7 +208,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t966">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/8ce6e6238d910a97fc01748210cac81e">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -220,7 +217,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t970">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/e497e124c427006e1ce23fce388161d4">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -229,7 +226,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t973">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/877748d5ae5a3d60375a28a5715bdc60">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -238,7 +235,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t976">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/4236638153f3ceb141b0b4f1bde9213d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -247,7 +244,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t979">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/84cc82f0a415a9926d93daabfd54eba0">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -256,7 +253,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t982">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/ae0894dd6c04f26f37fa12e49985dc8e">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -265,7 +262,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t985">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/3719ef76fd057fc83bb08bd4066d8cd3">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -274,7 +271,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t989">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/1bd8160a3f6aec714875ca4838316bc5">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
@@ -282,53 +279,50 @@
             <skosxl:literalForm xml:lang="sv">Barn</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t993">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/f3f75298ca6182bbdf1ee4efe813d8b9">
             <rdf:value>210</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/PUB_TARGET"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t1010">
+      </skos:notation>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/4f20c9b4ece5937579328464363a0d74">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <rdf:value xml:lang="en">Children up to 11 years old – the age group typically corresponding to the pre-school and primary school pupils.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t1019">
+      </skos:definition>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d8c89088deaf36ead49465de68492895">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-21</dct:created>
             <rdf:value xml:lang="fr">Enfants jusqu’à 11 ans. Cette tranche d’âge correspond généralement aux enfants d’âge préscolaire et aux élèves de l’enseignement primaire.</rdf:value>
             <dct:source xml:lang="fr">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/IMMC"/>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/PUB"/>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/target-audience/CON">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#TargetAudience"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t339">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/4fcaf6905492d2d1efa793e3a58bbc3f">
             <rdf:value>CON</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t344">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/49eff03ab31778b855200bead369e389">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -338,7 +332,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t347">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/074e4067869b5e8d141277c010dc140f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -347,7 +341,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t350">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/3aea6db584ec50b0c227434b22413fdd">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -356,7 +350,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t353">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/458c499a22328bcf5aff4bdee3470075">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -365,7 +359,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t356">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/33c022d8d79278c777eb360b893172d9">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -375,7 +369,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t360">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/a1e6dcedf7ce2aa90f547fa174e3dbb7">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -384,7 +378,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t363">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/e50f7594a9d6864769b996a33e066108">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -393,7 +387,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t366">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/3b53cb2b287e1f8f4a4f35bff8928ced">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -402,7 +396,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t369">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/02014d9e4fd41767666158460539eaec">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -411,7 +405,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t372">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/2b8f951068be767362a9e8f85e93581c">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -420,7 +414,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t375">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/e5822e4897c1a61a791a5d3e8d1976c0">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -429,7 +423,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t379">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/548b19b8eb0aba075cf960fafb4119a6">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -438,7 +432,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t382">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/74d4bdfe7743c7d31c9c1fd37d71facb">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -447,7 +441,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t385">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/987e5c51b98551f68d65277664317acb">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -456,7 +450,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t388">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/fcbda8f82bd7301bed8c3fb1e74af702">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -465,7 +459,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t391">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/3573236c7d8aee2f389782b033f64467">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -474,7 +468,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t394">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/c9b72342180385069ae5e1eb371e2dd9">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -483,7 +477,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t398">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/75b835ae5f325d86df87885650de0566">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -492,7 +486,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t401">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/817181805d7553dabdaca4265ee58096">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -501,7 +495,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t404">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/72d566cc0ce5b933951347cd99152eb8">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -510,7 +504,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t407">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/2e0ad93e3aa301a1b35b0fa4c0f86b7d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -519,7 +513,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t410">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/80cac3c5e9471202a58471809343cfdb">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -528,7 +522,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t413">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/48e29197ec42dd46526971776a953bee">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -537,7 +531,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t417">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/2722b3ce37a7eb76611b429ef17a491e">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -545,43 +539,40 @@
             <skosxl:literalForm xml:lang="sv">Konsumenter</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t421">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/677e537b0b4da6546346934bfbda26a2">
             <rdf:value>Consumers</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/EUBOOKSHOP"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t424">
+      </skos:notation>
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/b0ef68d44b4b031a027d6b74eae0e9c8">
             <rdf:value>206</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/PUB_TARGET"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <!--in template name="specific-part-invariant"-->
+      </skos:notation>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/IMMC"/>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/PUB"/>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/target-audience/EDU">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#TargetAudience"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t440">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/e816b58ef249d46403259fa87fc25cb2">
             <rdf:value>EDU</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t445">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/4d1b39a9039e44574524a8873b2139d1">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -591,7 +582,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t448">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/11206a0bc19cc1898493c5b4c534905f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -600,7 +591,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t451">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/be8c7d2bf41e98a8ece82fc97b8a2693">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -609,7 +600,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t454">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/784706f791245adb26f2582156a39d25">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -618,7 +609,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t457">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/b5db9281a6fa5331eda4e84d8990fe30">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -628,7 +619,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t461">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/c3fc2fee8ceb55e34fc7c3c1a53dbe0f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -637,7 +628,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t464">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d4ebc0edef2b0bb22b69f49a25ad91d0">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -646,7 +637,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t467">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d6545519aa4ba50e191e30fd24e14f68">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -655,7 +646,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t470">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/6061d3ada78afe26e05b5b17577ac9be">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -664,7 +655,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t473">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/107d0d6f211e52f69fc1582a3a0dd82b">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -673,7 +664,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t476">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/b30a06758e2246d8c4b0cc55e807176f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -682,7 +673,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t480">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/55e54a675d75355931e29ff4d38f4894">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -691,7 +682,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t483">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/a9268e6d2533967e91d3ba94e0312849">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -700,7 +691,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t486">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/642ae0568194a1fc69632527c15b3f9d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -709,7 +700,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t489">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/1941e2bce2acd2d3ad9529402d8b2091">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -718,7 +709,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t492">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/ec906ce81fcbd438e7cbb288dc8f605f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -727,7 +718,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t495">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/eca22b083641f25ca15e00c414a81449">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -736,7 +727,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t499">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/1313b0740a1d8295b5d8a3015a7b006f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -745,7 +736,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t502">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/c609d67f76afa3c1f883ff654545a6d1">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -754,7 +745,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t505">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/e710b19fdeabad436f8948ca247fbd51">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -763,7 +754,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t508">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d32782dc3481c3888985c9fabc0a93e3">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -772,7 +763,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t511">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/9bd4bba21591d4b42d2f9f512762c496">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -781,7 +772,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t514">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/2445410f39c13a3d8c27425a79961a16">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -790,7 +781,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t518">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/e670969a59ff7b7a7ff6a2c8bfbae263">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -798,61 +789,58 @@
             <skosxl:literalForm xml:lang="sv">Utbildning</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t522">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/9c1a4133ea73b6f02f019015ce522cba">
             <rdf:value>Education</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/EUBOOKSHOP"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t525">
+      </skos:notation>
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/68497919afbf919b1bdb024451f2b1be">
             <rdf:value>600</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/PUB_TARGET"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t542">
+      </skos:notation>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/8323bebda4b3f64bce5c3f4ac9a68ee3">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-21</dct:created>
             <rdf:value xml:lang="en">Educators and teachers.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t551">
+      </skos:definition>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/5977b3ba4b907e85c39c4cc79c162701">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-21</dct:created>
             <rdf:value xml:lang="fr">Éducateurs et enseignants.</rdf:value>
             <dct:source xml:lang="fr">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/IMMC"/>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/PUB"/>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/target-audience/GEN">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#TargetAudience"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t6">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/2028e4de65f7be1306845debc1b8ad57">
             <rdf:value>GEN</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t11">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/1ab8d113d541d9beb83df128aff71fa2">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -862,7 +850,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t14">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/a244b7295e84302d05311af3ecf2fca3">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -871,7 +859,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t17">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/395dc8c4d93df5a02c5a0ad94b40abdd">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -880,7 +868,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t20">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/12d342e2f5881d6e22013c4b4f554e7e">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -889,7 +877,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t23">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/c2015d2163635b3ac89b4c7a9861c6d0">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -899,7 +887,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t27">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/10422aa4364b48dee4f6986e7e323566">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -908,7 +896,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t30">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/698b8507873374e56ac2a20ce1c0d847">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -917,7 +905,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t33">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/21ecccfd87c18d1a3bca5036ee419f0f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -926,7 +914,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t36">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/c263e345b3cc3b499683b4e3861a99e4">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -935,7 +923,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t39">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/a85c280a00ecc536e04763ac41a99874">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -944,7 +932,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t42">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/5ccfdb631070e08bdd9479bce2b05208">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -953,7 +941,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t46">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/46587669967e65365496f96f35613d85">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -962,7 +950,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t49">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/0ef849e9c85d1ccb99b5e14440f3976c">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -971,7 +959,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t52">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/2ee868f259335c28b0b9b312eb8e5157">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -980,7 +968,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t55">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/e95cc619726243212f5c833d476f65ae">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -989,7 +977,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t58">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/ab2897d96cf2eca0faeda71132e493f7">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -998,7 +986,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t61">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/cf777682f094dd893ea9699a88ed77a8">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1007,7 +995,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t65">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/28c0759730bfc7be3c5b61f7ea6260fb">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1016,7 +1004,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t68">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/42091eb388a1362deef433dcf1c53485">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1025,7 +1013,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t71">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/e6b8216f8cb58aca3fa81e9037046882">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1034,7 +1022,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t74">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/be22dcb0d5fd50fd039321c4d64338f9">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1043,7 +1031,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t77">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/705a1f42e8327ae210bbece46aecebb5">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1052,7 +1040,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t80">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/c93793b0f0f4c4dee20dbc691a089b07">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1061,7 +1049,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t84">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d6b5710192bc04be8d9f6054b26321db">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1069,52 +1057,49 @@
             <skosxl:literalForm xml:lang="sv">Allmänheten</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t88">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/fc37236c7ecce31e00b4be05b1dd6023">
             <rdf:value>General public</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/EUBOOKSHOP"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t91">
+      </skos:notation>
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/9790377e07178b38794a2a984b5f84b6">
             <rdf:value>200</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/PUB_TARGET"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t108">
+      </skos:notation>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/c34c81c4cbc05f7bbcb79fb7cf967a85">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-16</dct:created>
             <rdf:value xml:lang="en">Non-specialists in the field of a given publication.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/IMMC"/>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/PUB"/>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/target-audience/LEG">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#TargetAudience"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t801">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/0767207d7d0174214104ce0ec16efec7">
             <rdf:value>LEG</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t806">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/a5c860668cb01b37e1941907226f9c85">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1124,7 +1109,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t809">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/1e188e9bfb70231a30c06f36527bd765">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1133,7 +1118,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t812">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/b9c8bcd5c44a27b186edde43c2aea82c">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1142,7 +1127,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t815">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/79629b22d272e1f1dc516e947f317178">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1151,7 +1136,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t818">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/1817649784bc82de06a231c37e72b512">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1161,7 +1146,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t822">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d80dfc21f7b3553432072cbeb69d6aaf">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1170,7 +1155,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t825">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d7e6b8e691f2cf846a19ab23952e442a">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1179,7 +1164,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t828">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/b444d545d6177233d2bcb6feabafbdfd">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1188,7 +1173,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t831">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/123bb140c28a280bd71492f3782dcb85">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1197,7 +1182,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t834">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/29f6007810b0751c3d2654da754192c7">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1206,7 +1191,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t837">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/a1a9dcb8681b3fc0a65711132dc9c727">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1215,7 +1200,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t841">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/a270664db14c33fa8ccbcdf1b34483a5">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1224,7 +1209,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t844">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/2dec482d35e23c12bb83e4caaf2549c6">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1233,7 +1218,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t847">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/7f09299f40b82e4f6f7a0ebc0723eb05">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1242,7 +1227,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t850">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/3dbe023f5703b32f813b0f9a3c613b50">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1251,7 +1236,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t853">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/c6660d8f53c09853168a213361a89cdf">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1260,7 +1245,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t856">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/20ac55b7162eadda4ec500a2627172f2">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1269,7 +1254,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t860">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/8b4e3f6b8dfdc01ad7742067c12f45a6">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1278,7 +1263,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t863">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d6fd855aebcb885bfe44330ff5acddcd">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1287,7 +1272,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t866">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/bed9b3fae82663e838b902e6bbc2f414">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1296,7 +1281,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t869">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/63d0cdae80c27a20a428f14121f9989d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1305,7 +1290,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t872">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/14c885ee8f9c66827b0ac746402825f0">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1314,7 +1299,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t875">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/fff2a83cc899a0e6eab9aa92c9e65699">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1323,7 +1308,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t879">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/81f753a4cb4f53f7b7c428810b4bc532">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1331,44 +1316,41 @@
             <skosxl:literalForm xml:lang="sv">Lagstiftning</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t883">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/1f15f847fd2aff85de7b4487461cce1a">
             <rdf:value>705</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/PUB_TARGET"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t900">
+      </skos:notation>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/a7b43c1336216cf4a45eefd704d1feb7">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-16</dct:created>
             <rdf:value xml:lang="en">Specialised public that needs to access legal information to learn about or apply law, for example: jurists, lawyers, legislators.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/IMMC"/>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/PUB"/>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/target-audience/MIN">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#TargetAudience"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t241">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/fb42380248ae84aa8e85f7a729fe9b6b">
             <rdf:value>MIN</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t246">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/0dbc1f95e2a37cc15599235d00082630">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1378,7 +1360,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t249">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/33d10f8b03aba6b9f9d4830b564549bb">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1387,7 +1369,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t252">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/0eb2226f12ec177f43d77047e2d4301b">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1396,7 +1378,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t255">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/ec19294bad47eb14a5763e4fd3f1a44f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1405,7 +1387,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t258">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/ea2e5145c0719317ab1bd6e05f76f0eb">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1415,7 +1397,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t262">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/49806f32b2c465f42681709c6cd329e4">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1424,7 +1406,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t265">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/788f723f7b7ea9b22eff96836e94d4af">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1433,7 +1415,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t268">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/212ac85255879d851de2aacfc57c2362">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1442,7 +1424,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t271">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/78fc341f618fbaa5272faea830621cfb">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1451,7 +1433,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t274">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/58876d2d8937dcc22ef4c2954fc247e3">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1460,7 +1442,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t277">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/ec8807627b75c8ce7cf10a7fa42f8ef8">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1469,7 +1451,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t281">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/51297907b63a6fa2c362a669fdee48a1">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1478,7 +1460,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t284">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/9e42bf0b6a258ed7db510cfd0bbb1880">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1487,7 +1469,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t287">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/5729269196777de545c072a8b0b3824d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1496,7 +1478,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t290">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/7b7c51b92d4b8d6c80215eb8d3d3a3f9">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1505,7 +1487,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t293">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/119fdba0d978c0af43e100fce450a204">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1514,7 +1496,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t296">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/b0db5248db93c9689464dc303a61a690">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1523,7 +1505,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t300">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/3fd217dbb734fe3db5551f194e60add2">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1532,7 +1514,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t303">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/022f4f314916aad386aaa32e25478aee">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1541,7 +1523,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t306">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/bbf1229b0f1792aeed5fc7f008f98286">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1550,7 +1532,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t309">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d891ad77afded4abac999496046f0bde">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1559,7 +1541,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t312">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/b5cc78a039fd4e24d8ac67a4abbe9f0e">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1568,7 +1550,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t315">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/681d620d4b1af06a23db7a6e121a7160">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1577,7 +1559,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t319">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/765f0a1d3c38c2fedb63341c58744f33">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1585,35 +1567,32 @@
             <skosxl:literalForm xml:lang="sv">Minoriteter</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t323">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/bc8f2f645dde1840f24b7b42a84e9645">
             <rdf:value>205</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/PUB_TARGET"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <!--in template name="specific-part-invariant"-->
+      </skos:notation>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/IMMC"/>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/PUB"/>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/target-audience/SCI">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#TargetAudience"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t682">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/09d198994380a55dcaeddc5f7ebaf589">
             <rdf:value>SCI</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t687">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/6e471a9c4495be22f15206fbeeed0fbe">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1623,7 +1602,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t690">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/9c030cb980d6dcff0d2ad641a8555b9a">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1632,7 +1611,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t693">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d63c007d724a396118442591065f3fa8">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1641,7 +1620,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t696">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/fd2a9c3b568f140e0f62d17820be606d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1650,7 +1629,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t699">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/89b33784df6acdfefb7a7930135e9354">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1660,7 +1639,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t703">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/8019d3da3db24eb372bee06a7ecebc7d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1669,7 +1648,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t706">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/60ffc8c34d6faaabbd2599ddd86727f1">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1678,7 +1657,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t709">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/a500f69ca0884cff088b56d2101a8e42">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1687,7 +1666,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t712">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/19f5c5f905a3ba780e4e494977623598">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1696,7 +1675,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t715">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/518eb2fbb6de403c9c43b35592105516">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1705,7 +1684,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t718">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/15ba49a016c13c1990e8eeb7cca143f5">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1714,7 +1693,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t722">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/bd9645da637107741f70a73bb9e3dad2">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1723,7 +1702,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t725">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/c15a0bd837bf9aa79dd69f9f106d1ebc">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1732,7 +1711,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t728">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/2285b3eeb30944cd0f92f6d7d8f7fa2e">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1741,7 +1720,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t731">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/5d09d6d186571664c0be0c1d915432ec">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1750,7 +1729,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t734">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/33251106333bd16c2935af5e1ed5342a">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1759,7 +1738,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t737">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/63eff1eaa281d27c778010272d52a72c">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1768,7 +1747,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t741">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/85c061640b24267953c45b6114451ad9">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1777,7 +1756,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t744">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/173c99960d2c127f1872442ba78bbc76">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1786,7 +1765,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t747">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/b5ef23bdadac9fddafaea760d1f04481">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1795,7 +1774,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t750">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/18c40e989e659d52a744b632131eaf1a">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1804,7 +1783,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t753">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/c6cca1250f0f94d87745890410bac49b">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1813,7 +1792,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t756">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/60bdfa39e700026e766b059b8443f77f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1822,7 +1801,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t760">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/6159426ab34d8f65f5c02e52e957f331">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1830,61 +1809,58 @@
             <skosxl:literalForm xml:lang="sv">Vetenskap</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t764">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/148f7e67f6ed74265f5e87efaa2765f6">
             <rdf:value>Scientific</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/EUBOOKSHOP"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t767">
+      </skos:notation>
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/db8d09b79d38bea7f92795ec7085b2f6">
             <rdf:value>704</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/PUB_TARGET"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t784">
+      </skos:notation>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/60aad51e328147b5514f39eb781a7461">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-21</dct:created>
             <rdf:value xml:lang="en">Persons with interest in technical scientific publications.</rdf:value>
             <dct:source xml:lang="en"/>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t790">
+      </skos:definition>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/c5f683271334e6ca2cd1d0e2841a46a4">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-21</dct:created>
             <rdf:value xml:lang="fr">Personnes ayant un intérêt pour les publications techniques scientifiques.</rdf:value>
             <dct:source xml:lang="fr">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/IMMC"/>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/PUB"/>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/target-audience/SPE">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#TargetAudience"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t563">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/0c78eb78fd87206db6dce5d9ab1f6cc2">
             <rdf:value>SPE</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t568">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/5456067b0f0fba38fcd076aba44379a7">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1894,7 +1870,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t571">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/057163b6a9be5e44f71b1960db85f003">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1903,7 +1879,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t574">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/9c09e769deb5d58ced1dc7032d203844">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1912,7 +1888,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t577">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/f0f9b48adb660b82d22de989065be708">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1921,7 +1897,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t580">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/38de2bb046f55818e63afadd1c8dc009">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1931,7 +1907,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t584">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/cc9ac9d89a15f80bf90ed31ad0060c4f">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1940,7 +1916,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t587">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/54ddb607b02222dc4687aa468a0a39d9">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1949,7 +1925,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t590">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/5e2b5a8613d63b5e8175e8c7f25f8910">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1958,7 +1934,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t593">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/47940942c659ed9cebc3b7b9825a00ff">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1967,7 +1943,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t596">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/ff69ecc9075c7e0bbbb4fb86f452c22d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1976,7 +1952,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t599">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/b6f3f1290be04494715504da04d28448">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1985,7 +1961,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t603">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/effacc1b38c5106f513781f6a07b908c">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -1994,7 +1970,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t606">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/dd99687dca759243f9948b6a18506cdb">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2003,7 +1979,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t609">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/eb19bd31b6d20d90d427c4d128183630">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2012,7 +1988,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t612">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/cd8bd3c21ffab3f80567be2ccf413dfa">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2021,7 +1997,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t615">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/225ecf909f974c2f4da4dd9f986427c5">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2030,7 +2006,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t618">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/2585e734c463cc8d7fdbeb6b9dc3d650">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2039,7 +2015,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t622">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/87b10e4e4c95f6a60483825fe7451481">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2048,7 +2024,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t625">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/0a766ee0fc05dca22e7b877a95cc927a">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2057,7 +2033,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t628">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/da3b4ea348ad2e96f64e0c66beeff84c">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2066,7 +2042,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t631">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/1a059966acf8b55c7e974d95c889599d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2075,7 +2051,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t634">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/566ea4e8ca4d89f538e2d492d3bbf43d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2084,7 +2060,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t637">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d502169379e21c05bfa549fd76aa7777">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2093,7 +2069,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t641">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/07e13e1046fc1412176c7b9dd2eaffe3">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2101,61 +2077,58 @@
             <skosxl:literalForm xml:lang="sv">Fackområden</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t645">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/6dff6beb7783f18ec4df750a5d5b6fe3">
             <rdf:value>Specialised/Technical</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/EUBOOKSHOP"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t648">
+      </skos:notation>
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/900ada7d182d9b441ce6b05462d0517b">
             <rdf:value>702</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/PUB_TARGET"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t665">
+      </skos:notation>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/defda7ec64cbe179cad9024957c21b5d">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-21</dct:created>
             <rdf:value xml:lang="en">Persons with interest in technical non-scientific publications.</rdf:value>
             <dct:source xml:lang="en"/>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t671">
+      </skos:definition>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/089aeace067fb628dea96a340293d555">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-21</dct:created>
             <rdf:value xml:lang="fr">Personnes ayant un intérêt pour les publications techniques non scientifiques.</rdf:value>
             <dct:source xml:lang="fr">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/IMMC"/>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/PUB"/>
    </skos:Concept>
    <skos:Concept rdf:about="http://publications.europa.eu/resource/authority/target-audience/YOP">
-      <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#TargetAudience"/>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t119">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/a0f91b09cdc51472618164ca1e9ec118">
             <rdf:value>YOP</rdf:value>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/LAC"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
+      </skos:notation>
       <skos:topConceptOf rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <skos:inScheme rdf:resource="http://publications.europa.eu/resource/authority/target-audience"/>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
       <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
-      <!--in template name="specific-part-temporary"-->
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t124">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/b0ba80ad6b093eb2a803081f764e1425">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2165,7 +2138,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t127">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/9bc346f67a3b7bfeb640e545456fe06d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2174,7 +2147,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t130">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/2785d7f3cd3628d87dff307395d6bbcf">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2183,7 +2156,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t133">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/aa57af5249006032167361d43d7a0b4a">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2192,7 +2165,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t136">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/59a629db3848eb55ce181626bd5cba11">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2202,7 +2175,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t140">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/c8ef89ce6503f1d2335a955092078d39">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2211,7 +2184,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t143">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/2fbf8d193b13d0c6d70c58f253564e80">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2220,7 +2193,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t146">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/424488730f3c6c9ed754a1bd84e0486d">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2229,7 +2202,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t149">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/5ca5cf3c89e0adc597e865065e376118">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2238,7 +2211,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t152">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/137d240914c9dba7ad9c913198bc71e4">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2247,7 +2220,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t155">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/21d8aa9f5e2e3d278964ec5e2f2ec0a6">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2256,7 +2229,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t159">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/9cca0c8b641e696955fed545ad649cc2">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2265,7 +2238,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t162">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/a35a427369115c9f85d5c7686c46f84e">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2274,7 +2247,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t165">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/316779adea68c788f0d2f2c58c0c5c80">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2283,7 +2256,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t168">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/0e2e64eb3f145be81e8d389dc0a03f42">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2292,7 +2265,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t171">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d4b16f5189739b044207b59e99406855">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2301,7 +2274,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t174">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/dc6482eb5d6231a68a6b18c41dddc4d7">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2310,7 +2283,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t178">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/7601d2fa1f1c53de7103f977aa8b0205">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2319,7 +2292,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t181">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/823a5ef5c209130e6429c12e37adb39c">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2328,7 +2301,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t184">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/8b103b1bfdf2bbe1fb0b2e5e4d4cce26">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2337,7 +2310,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t187">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/5a61cbc7af8567ed80bd668891048369">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2346,7 +2319,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t190">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/ed657c4143241832ca0663401d5987ca">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2355,7 +2328,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t193">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/af5859c09545a241328a464bb52f2276">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2364,7 +2337,7 @@
          </skosxl:Label>
       </skosxl:prefLabel>
       <skosxl:prefLabel>
-         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t197">
+         <skosxl:Label rdf:about="http://publications.europa.eu/resource/authority/target-audience/57e2b934e7b40d5c338cc7275ad61df1">
             <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
@@ -2372,41 +2345,40 @@
             <skosxl:literalForm xml:lang="sv">Ungdomar</skosxl:literalForm>
          </skosxl:Label>
       </skosxl:prefLabel>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t201">
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d4077577694dd67ea6c99f5688ef380c">
             <rdf:value>Young people</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/EUBOOKSHOP"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlNotation>
-         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t204">
+      </skos:notation>
+      <skos:notation>
+         <euvoc:XlNotation rdf:about="http://publications.europa.eu/resource/authority/target-audience/1da4a487a201579f86afff1860189df8">
             <rdf:value>201</rdf:value>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-25</dct:created>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
             <dct:type rdf:resource="http://publications.europa.eu/resource/authority/notation-type/PUB_TARGET"/>
          </euvoc:XlNotation>
-      </euvoc:xlNotation>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t221">
+      </skos:notation>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/1bb66138a5da7359851b7838a2b53f4a">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-04</dct:created>
             <rdf:value xml:lang="en">Young people from 12 to 24 years old – the age group typically corresponding to the secondary and higher education students.</rdf:value>
             <dct:source xml:lang="en">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <euvoc:xlDefinition>
-         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/d1t230">
+      </skos:definition>
+      <skos:definition>
+         <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/target-audience/77721b58538346141378dcfb54e29fd4">
             <rdf:type rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
             <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-21</dct:created>
             <rdf:value xml:lang="fr">Jeunes de 12 à 18 ans. Cette tranche d’âge correspond généralement aux élèves de l’enseignement secondaire.</rdf:value>
             <dct:source xml:lang="fr">OP</dct:source>
             <euvoc:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</euvoc:startDate>
          </rdf:Description>
-      </euvoc:xlDefinition>
-      <!--in template name="specific-part-invariant"-->
+      </skos:definition>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/IMMC"/>
       <lemon:context rdf:resource="http://publications.europa.eu/resource/authority/use-context/PUB"/>
    </skos:Concept>
