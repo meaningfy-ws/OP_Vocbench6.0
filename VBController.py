@@ -332,7 +332,7 @@ def get_base_uri_from_file(file_name):
 
 
 ##############################################################
-# List all the projects inside the system
+# List of the namespace inside a file
 ###############################################################
 def parse_nspace_nt(file_name):
     global data_folder
@@ -405,6 +405,9 @@ def list_of_project(only_title):
 ###################################################################
 def close_project(project_name):
     global logger
+    global session
+    
+    connection()
     payload = {'consumer': 'SYSTEM', 'projectName': project_name}
     r = session.post(
         server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/disconnectFromProject?",
@@ -1671,7 +1674,7 @@ def main(argv):
     set_logger()
 
     try:
-        opts, args = getopt.getopt(sys.argv[1:],"a:cdef:ghik:lm:no:pq:u:vs:txwbr:jyv:",["setDataFd=","name_list=", "projectsFile=", "data=", "-clearData="])
+        opts, args = getopt.getopt(sys.argv[1:],"a:cdef:ghik:lm:no:pq:u:vs:txwbr:jyz:v:",["setDataFd=","name_list=", "projectsFile=", "data=", "-clearData="])
     except getopt.GetoptError:
         print ('AutoProject.py -d <datafile>')
         sys.exit(2)
@@ -1742,6 +1745,9 @@ def main(argv):
         elif opt in ("-r"):
             project = arg
             create_report(project)
+        elif opt in ("-z"):
+            project = arg
+            close_project(project)
         else:
             assert False, "unhandled option"
 
