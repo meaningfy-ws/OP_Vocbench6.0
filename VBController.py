@@ -431,8 +431,14 @@ def open_project(project_name):
     r = session.post(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/accessProject?",
         params=payload)
     logger.info(r.content)
+
+    payload = {'projectName': project_name, 'email': info["result"]["email"], 'ctx_project': project_name}
+    r = session.get(
+        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/getProjectUserBinding?",
+        params=payload)
+    logger.info(r.content)
     
-    payload = {'properties': 'active_schemes,active_lexicon,show_flags,show_instances_number,project_theme,search_languages,search_restrict_lang,search_include_locales,search_use_autocomplete,class_tree_filter_enabled,class_tree_filter_map,class_tree_root,concept_tree_base_broader_prop,concept_tree_broader_props,concept_tree_narrower_props,concept_tree_include_subprops,concept_tree_sync_inverse,concept_tree_visualization,lex_entry_list_visualization,lex_entry_list_index_lenght,editing_language',
+    payload = {'properties': 'active_schemes,active_lexicon,show_flags,show_instances_number,project_theme,search_languages,search_restrict_lang,search_include_locales,search_use_autocomplete,class_tree_filter,class_tree_root,concept_tree_base_broader_prop,concept_tree_broader_props,concept_tree_narrower_props,concept_tree_include_subprops,concept_tree_sync_inverse,concept_tree_visualization,lex_entry_list_visualization,lex_entry_list_index_lenght,editing_language,filter_value_languages,res_view_partition_filter,hide_literal_graph_nodes',
                'ctx_project': project_name}
     r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/PreferencesSettings/getPUSettings?",
         params=payload)
@@ -442,27 +448,26 @@ def open_project(project_name):
     r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/PreferencesSettings/getPUSettings?",
         params=payload)
     logger.info(r.content)
+
+    payload = {'ctx_project': project_name}
+    r = session.get(
+        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/listUserCapabilities?",
+        params=payload)
+    logger.info(r.content)
+
+    r = session.get(
+        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Collaboration/getCollaborationSystemStatus?",
+        params=payload)
+    logger.info(r.content)
     
     payload = {'properties': 'languages', 'ctx_project': project_name}
     r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/PreferencesSettings/getProjectSettings?",
         params=payload)
     logger.info(r.content)
-    
-    payload = {'projectName': project_name, 'email': info["result"]["email"], 'ctx_project':project_name}
-    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/getProjectUserBinding?",
-        params=payload)
-    logger.info(r.content)
-    
+
     payload = {'ctx_project': project_name}
-    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Collaboration/getCollaborationSystemStatus?",
-        params=payload)
-    logger.info(r.content)
-    
-    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/listUserCapabilities?",
-        params=payload)
-    logger.info(r.content)
-    
-    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?",
+    r = session.get(
+        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?",
         params=payload)
     logger.info(r.content)
     
