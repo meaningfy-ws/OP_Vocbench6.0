@@ -182,7 +182,7 @@ def project_creation():
                     if (len(row[1].strip()) > 1):
                         base_uri = row[1]
                     else:
-                        base_uri = get_base_uri_from_file(row[14])
+                        base_uri = get_base_uri_from_file(row[15])
             
                     payload = {'extensionPointID': 'it.uniroma2.art.semanticturkey.extension.extpts.repositoryimplconfigurer.RepositoryImplConfigurer'}
                     r = session.get(server + ":" + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Extensions/getExtensions?",
@@ -209,20 +209,15 @@ def project_creation():
                         params=payload)
                     logger.info(r.content)
                     
-                    payload = {'extensionPointID': 'it.uniroma2.art.semanticturkey.extension.extpts.repositoryimplconfigurer.RepositoryImplConfigurer'}
-                    r = session.get(server + ":" + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Extensions/getExtensions?",
-                        params=payload)
-                    logger.info(r.content)
-                    
                     payload = {'properties': 'remote_configs'}
                     r = session.get(server + ":" + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/PreferencesSettings/getSystemSettings?",
                         params=payload)
                     logger.info(r.content)
                     
                     payload = {'consumer':'SYSTEM', 'projectName' : row[0], 'baseURI' : base_uri, 'model' : row[2],
-                   'lexicalizationModel' : row[3], 'historyEnabled' : row[4], 'validationEnabled' : row[5], 'repositoryAccess': row[6],
-                   'coreRepoID' : row[8], 'supportRepoID': row[9] , 'coreRepoSailConfigurerSpecification':row[10],
-                    'supportRepoSailConfigurerSpecification':row[11], 'creationDateProperty': row[12], 'modificationDateProperty': row[13]}
+                   'lexicalizationModel' : row[3], 'historyEnabled' : row[4], 'validationEnabled' : row[5], 'blacklistingEnabled' : row[6], 'repositoryAccess': row[7],
+                   'coreRepoID' : row[9], 'supportRepoID': row[10] , 'coreRepoSailConfigurerSpecification':row[11],
+                    'supportRepoSailConfigurerSpecification':row[12], 'creationDateProperty': row[13], 'modificationDateProperty': row[14]}
                     
                     if (base_uri == ""):
                         logger.error("Error : the base URI of the project is not defined")
@@ -1120,11 +1115,11 @@ def _check_if_Project(project):
     payload = {'consumer' : 'SYSTEM', 'projectName':project, 'requestedAccessLevel':'R',
                'requestedLockLevel':'NO'}
     r = session.post(server + ":" + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/accessProject?", params=payload)
-    if ('exception' in r.text):
-        logger.error("project not present")
+    if ('it.uniroma2.art.semanticturkey.exceptions.ProjectInexistentException' in r.text):
+        logger.error("The project " + project + " is not present")
         return False
     else:
-        logger.info("project present")
+        logger.info("The project " + project + " is present")
         return True
 
 ################################################################
