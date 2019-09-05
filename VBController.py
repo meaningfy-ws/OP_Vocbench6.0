@@ -527,11 +527,52 @@ def data_upload(data_file="", project = "", base_URI = ""):
         
         payload = {'ctx_project': project}
         format = _formatExtraction(pathF, project)
+
+        payload = {'ctx_project': project, 'schemes': '', 'broaderProps': '', 'narrowerProps': '',
+                   'includeSubProperties': 'true'}
+        r = session.get(
+            server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/SKOS/getTopConcepts?",
+            params=payload)
+        logger.info(r.content)
+
+        payload = {'ctx_project': project}
+        r = session.get(
+            server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/SKOS/getAllSchemes?",
+            params=payload)
+        logger.info(r.content)
+
+        payload = {'ctx_project': project, 'classList': '<' + 'http://www.w3.org/2002/07/owl#Thing' + '>'}
+        r = session.get(
+            server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Classes/getClassesInfo?",
+            params=payload)
+        logger.info(r.content)
+
+        payload = {'ctx_project': project}
+        r = session.get(
+            server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Properties/getTopProperties?",
+            params=payload)
+        logger.info(r.content)
+
+        r = session.get(
+            server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Datatypes/getDeclaredDatatypes?",
+            params=payload)
+        logger.info(r.content)
+
+        r = session.get(
+            server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/SKOS/getRootCollections?",
+            params=payload)
+        logger.info(r.content)
+
+        payload = {'ctx_project': project, 'superClass': '<' + 'http://www.w3.org/2002/07/owl#Thing' + '>' , 'numInst' : 'false'}
+        r = session.get(
+            server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Classes/getSubClasses?",
+            params=payload)
+        logger.info(r.content)
         
         if (base_URI == ""):
             base_URI = get_base_URI_from_project(project)
         if (base_URI == "") or  (base_URI == None):
-            logger.error("The base URI of the project is not defined - The data cannot be uploaded")
+            logger.error("The base URI of the project is not defined - The data cannot be uploaded into " + project)
             sys.exit()
         data = {'baseURI': base_URI, 'transitiveImportAllowance': 'web',
                 'format': format, 'rdfLifterSpec':'{"factoryId":"it.uniroma2.art.semanticturkey.extension.impl.rdflifter.rdfdeserializer.RDFDeserializingLifter"}',
@@ -544,34 +585,6 @@ def data_upload(data_file="", project = "", base_URI = ""):
         
         logger.info("Upload in the project " + project + " is well achieved")
 
-        payload = {'ctx_project': project, 'classList': '<'+'http://www.w3.org/2002/07/owl#Thing'+'>'}
-        r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Classes/getClassesInfo?",
-            params=payload)
-        logger.info(r.content)
-
-        payload = {'ctx_project': project}
-        r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Properties/getTopProperties?",
-            params=payload)
-        logger.info(r.content)
-        r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Datatypes/getDeclaredDatatypes?",
-            params=payload)
-        logger.info(r.content)
-
-        payload = {'ctx_project': project, 'schemes':'', 'broaderProps':'', 'narrowerProps':'', 'includeSubProperties':'true'}
-        r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/SKOS/getTopConcepts?",
-            params=payload)
-        logger.info(r.content)
-        
-        payload = {'ctx_project': project}
-        r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/SKOS/getAllSchemes?",
-            params=payload)
-        logger.info(r.content)
-        r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/SKOS/getRootCollections?",
-            params=payload)
-        logger.info(r.content)
-
-        #validate_all(project)
-        
     return
 
 
