@@ -243,12 +243,14 @@ def project_creation():
                         params=payload)
                     logger.info(r.content)
 
-                    payload = {'factoryID': 'it.uniroma2.art.semanticturkey.plugin.impls.urigen.CODAURIGeneratorFactory'}
-                    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Plugins/getPluginConfigurations?",
+                    payload = {
+                        'factoryID': 'it.uniroma2.art.semanticturkey.plugin.impls.rendering.OntoLexLemonRenderingEngineFactory'}
+                    r = session.get(
+                        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Plugins/getPluginConfigurations?",
                         params=payload)
                     logger.info(r.content)
-                    
-                    payload = {'factoryID': 'it.uniroma2.art.semanticturkey.plugin.impls.rendering.OntoLexLemonRenderingEngineFactory'}
+
+                    payload = {'factoryID': 'it.uniroma2.art.semanticturkey.plugin.impls.urigen.CODAURIGeneratorFactory'}
                     r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Plugins/getPluginConfigurations?",
                         params=payload)
                     logger.info(r.content)
@@ -265,6 +267,7 @@ def project_creation():
                     
                     if (base_uri == ""):
                         logger.error("Error : the base URI of the project is not defined")
+                        logger.error("The project : " + row[0] + " is not created.")
                         sys.exit()
  
                     r = session.post(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/createProject?",
@@ -315,7 +318,7 @@ def project_creation():
 
 
 ##############################################################
-# List all the projects inside the system
+# Get the base URI by searching into a file
 ###############################################################
 def get_base_uri_from_file(file_name):
     global logger
@@ -427,7 +430,7 @@ def open_project(project_name):
         return False
     
     payload = {'consumer': 'SYSTEM', 'projectName': project_name, 'requestedAccessLevel': 'RW',
-               'requestedLockLevel': 'NO', 'ctx_project': project_name}
+               'requestedLockLevel': 'NO'}
     r = session.post(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/accessProject?",
         params=payload)
     logger.info(r.content)
@@ -449,23 +452,23 @@ def open_project(project_name):
         params=payload)
     logger.info(r.content)
 
-    payload = {'ctx_project': project_name}
+    payload = {'properties': 'languages', 'ctx_project': project_name}
     r = session.get(
-        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/listUserCapabilities?",
+        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/PreferencesSettings/getProjectSettings?",
         params=payload)
     logger.info(r.content)
 
+    payload = {'ctx_project': project_name}
     r = session.get(
         server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Collaboration/getCollaborationSystemStatus?",
         params=payload)
     logger.info(r.content)
     
-    payload = {'properties': 'languages', 'ctx_project': project_name}
-    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/PreferencesSettings/getProjectSettings?",
+    r = session.get(
+        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/listUserCapabilities?",
         params=payload)
     logger.info(r.content)
 
-    payload = {'ctx_project': project_name}
     r = session.get(
         server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?",
         params=payload)
