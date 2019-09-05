@@ -633,7 +633,7 @@ def add_namespace(project_name, prefix, namespace):
     global data_folder
     global logger
     open_project(project_name)
-
+    
     payload = {'ctx_project': project_name}
     r = session.get(
         server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getBaseURI?",
@@ -687,8 +687,7 @@ def add_namespace(project_name, prefix, namespace):
     
     logger.info(r.content)
     
-    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?",
-        params=payload)
+    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?")
     
     logger.info(r.content)
     
@@ -827,9 +826,13 @@ def createForm():
                     open_project(project)
     
                     logger.info('Start of insertion of the form {0} onto the project {1}'.format(form, project))
+
+                    payload = {'ctx_project': project}
+                    r = session.get(
+                        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/getCustomFormConfigMap?",
+                        params=payload)
                     
                     #Check if the custom form already exists into the project
-                    payload = {'ctx_project': project}
                     r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/getAllCustomForms?",
                         params=payload)
 
@@ -841,9 +844,7 @@ def createForm():
                         if ("it.uniroma2.art.semanticturkey.customform.form." + form == res['id']):
                             is_already = True
     
-                    if (is_already):
-                        logger.info("The custom form {0} already exists into the project {1} and it won't install again".format(form, project))
-                        continue
+                    
 
                     # Check if the collection form already exist into the project
                     r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/getAllFormCollections?",
@@ -856,75 +857,83 @@ def createForm():
                     for res in result_Coll["result"]:
                         if ("it.uniroma2.art.semanticturkey.customform.collection." + form == res['id']):
                             is_already = True
-                            
+
+                    # Start the creation of the new custom form
+                    if (is_already):
+                        logger.info("The custom form {0} already exists into the project {1} and it won't install again".format(form, project))
+                    else :
+                        payload = {'ctx_project': project}
+                        r = session.get(
+                            server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Properties/getTopProperties?",
+                            params=payload)
+    
+                        payload = {'ctx_project': project, 'formType': 'graph', 'pearl': custom_forms[form]['value']}
+                        r = session.post(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/validatePearl?",
+                            params=payload)
+
+                        logger.info(r.content)
+                        logger.info('Start of the creation of the custom form {0} into the project {1}'.format(form, project))
+        
+                        payload = {'ctx_project': project, 'type' : 'graph', 'id':"it.uniroma2.art.semanticturkey.customform.form." + form, 'name': form,
+                        'description': form, 'ref' : custom_forms[form]['value'], 'showPropChain' : custom_forms[form]['showPropChain']}
+                        r = session.post(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/createCustomForm?",
+                            params=payload)
+
+                        logger.info(r.content)
+    
+                        payload = {'ctx_project': project}
+                        r = session.get(server+ port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/getAllCustomForms?",
+                            params=payload)
+
+                        logger.info(r.content)
+    
+                        logger.info(
+                            'End of the creation of the custom form {0} into the project {1}'.format(form,
+                                                                                                       project))
+                    # End of the creation of the form collection
+                    # Start of the creation of the collection form
                     if (is_already):
                         logger.info(
                             "The form collection {0} already exists into the project {1} and it won't be installed again".format(
                                 form, project))
-                        continue
+                    else :
+                        r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/getAllCustomForms?",
+                            params=payload)
+    
+                        logger.info(r.content)
+                        logger.info(
+                            'Start of the creation of the collection form {0} into the project {1}'.format(form,
+                                                                                                       project))
+    
+                        payload = {'ctx_project': project, 'id': 'it.uniroma2.art.semanticturkey.customform.collection.' + form}
+                        r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/createFormCollection?",
+                            params=payload)
+    
+                        logger.info(r.content)
+        
+                        payload = {'ctx_project': project, 'formCollectionId' : 'it.uniroma2.art.semanticturkey.customform.collection.' + form,
+                                   'customFormIds': 'it.uniroma2.art.semanticturkey.customform.form.' + form,
+                                    'suggestions' : ''}
+                        r = session.post(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/updateFromCollection?",
+                            params=payload)
 
-                    # Start the creation of the new custom form
-                    payload = {'ctx_project': project}
+                        logger.info(r.content)
+        
+                        payload = {'ctx_project': project}
+                        r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/getAllFormCollections?",
+                            params=payload)
+                        
+                        logger.info('End of the creation of the collection form {0} into the project {1}'.format(form,
+                                                                                                       project))
+                    # End of the creation of the collection form
+                    # Start of the forms mapping
+                    r = session.get(
+                        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/getAllFormCollections?",
+                        params=payload)
+
                     r = session.get(
                         server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Properties/getTopProperties?",
                         params=payload)
-
-                    payload = {'ctx_project': project, 'formType': 'graph', 'pearl': custom_forms[form]['value']}
-                    r = session.post(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/validatePearl?",
-                        params=payload)
-
-                    logger.info(r.content)
-                    logger.info('Start of the creation of the custom form {0} into the project {1}'.format(form, project))
-    
-                    payload = {'ctx_project': project, 'type' : 'graph', 'id':"it.uniroma2.art.semanticturkey.customform.form." + form, 'name': form,
-                    'description': form, 'ref' : custom_forms[form]['value'], 'showPropChain' : custom_forms[form]['showPropChain']}
-                    r = session.post(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/createCustomForm?",
-                        params=payload)
-
-                    logger.info(r.content)
-    
-                    payload = {'ctx_project': project}
-                    r = session.get(server+ port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/getAllCustomForms?",
-                        params=payload)
-
-                    logger.info(r.content)
-    
-                    logger.info(
-                        'End of the creation of the custom form {0} into the project {1}'.format(form,
-                                                                                                   project))
-                    # End of the creation of the form collection
-                    # Start of the creation of the collection form
-                    
-                    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/getAllCustomForms?",
-                        params=payload)
-
-                    logger.info(r.content)
-                    logger.info(
-                        'Start of the creation of the collection form {0} into the project {1}'.format(form,
-                                                                                                   project))
-    
-                    payload = {'ctx_project': project, 'id': 'it.uniroma2.art.semanticturkey.customform.collection.' + form}
-                    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/createFormCollection?",
-                        params=payload)
-
-                    logger.info(r.content)
-    
-                    payload = {'ctx_project': project, 'formCollectionId' : 'it.uniroma2.art.semanticturkey.customform.collection.' + form,
-                               'customFormIds': 'it.uniroma2.art.semanticturkey.customform.form.' + form,
-                                'suggestions' : ''}
-                    r = session.post(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/updateFromCollection?",
-                        params=payload)
-
-                    logger.info(r.content)
-    
-                    payload = {'ctx_project': project}
-                    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/getAllFormCollections?",
-                        params=payload)
-                    
-                    logger.info('End of the creation of the collection form {0} into the project {1}'.format(form,
-                                                                                                   project))
-                    # End of the creation of the collection form
-                    # Start of the forms mapping
     
                     logger.info('Start of the form mapping'.format(form,project))
 
