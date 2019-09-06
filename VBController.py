@@ -1436,42 +1436,57 @@ def importOntology(project_name = ""):
                 
                 logger.info("An ontology is added to the project : " + project)
                 logger.info("The ontology : " + row[1] + " is currently treated")
-                
+
+                payload = {'ctx_project': project, 'classList' : '<' + 'http://www.w3.org/2002/07/owl#Thing' + '>' }
+                r = session.get(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Classes/getClassesInfo?", params=payload)
+
+                payload = {'ctx_project': project}
+                r = session.get(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Properties/getTopProperties?",params=payload)
+
+                r = session.get(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Datatypes/getDeclaredDatatypes?",
+                    )
+
+                payload = {'ctx_project': project, 'schemes' : '', 'broaderProps':'', 'narrowProps' : '', 'includeSubProperties' : 'true'}
+                r = session.get(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/SKOS/getTopConcepts?",
+                    params=payload)
+
+                payload = {'ctx_project': project}
+                r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/SKOS/getAllSchemes?", params=payload)
+
+                r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/SKOS/getRootCollections?",
+                    params=payload)
+
+                r = session.get(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getImports?",
+                    params=payload)
+
+                r = session.get(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?",
+                    params=payload)
+
+                base_uri_from_project = get_base_URI_from_project(project)
+                payload = {'ctx_project': project, 'includeInferred': 'false', 'resource': "<" + base_uri_from_project + ">"}
+                r = session.get(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/ResourceView/getResourceView?",
+                    params=payload)
+
+                payload = {'ctx_project': project}
+                r = session.get(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getImports?",
+                    params=payload)
+
+                r = session.get(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?",
+                    params=payload)
+
                 payload = {'ctx_project': project, 'baseURI': baseURI, 'mirrorFile': mirrorFile,
                        'transitiveImportAllowance': 'web', 'localFile':localFile}
                 fields={'localFile':(row[1], open(localFile , 'rb'), 'multipart/form-data')}
                 r = session.post(server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/addFromLocalFile?", files=fields, params=payload)
-                
-                logger.info(r.content)
-                
-                payload = {'ctx_project': project}
-                r = session.get(server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getImports?",
-                    params=payload)
-
-                logger.info(r.content)
-                
-                r = session.get(server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?",
-                    params=payload)
-
-                logger.info(r.content)
-                
-                base_uri_from_project = get_base_URI_from_project(project)
-                payload = {'ctx_project': project, 'includeInferred':'false', 'resource': "<" + base_uri_from_project + ">"}
-                r = session.get(server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/ResourceView/getResourceView?",
-                    params=payload)
-
-                logger.info(r.content)
-                
-                payload = {'ctx_project': project}
-                r = session.get(server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getImports?",
-                    params=payload)
-
-                logger.info(r.content)
-                
-                r = session.get(server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?",
-                    params=payload)
-
-                logger.info(r.content)
                 
                 validate_all(project)
                 
