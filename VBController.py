@@ -1118,7 +1118,7 @@ def create_new_user():
             if exist:
                 logger.info("the following user is already created into Vocbench : " + user )
                 continue
-            payload = {'email': user, 'password': row[1], 'givenName': row[2], 'familyName': row[3]}
+            payload = {'email': user, 'password': row[1], 'givenName': row[2], 'familyName': row[3], 'languageProficiencies' : 'en'}
             r = session.post(
                 server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/registerUser?",
         params=payload)
@@ -1141,6 +1141,10 @@ def add_user_to_project():
     connection()
     global session
     global logger
+
+    user_list = []
+    role_list = []
+    lang_list = []
     
     if (os.path.exists(os.path.join(files_folder, "Template_Add_User_To_Project.csv"))):
         pathF = os.path.join(files_folder, "Template_Add_User_To_Project.csv")
@@ -1161,38 +1165,101 @@ def add_user_to_project():
                 logger.info("the user {0} does not exist into Vocbench and cannot be added to the project : {1}".format(user, row[2]))
                 continue
             
-            payload = {'projectName': row[2]}
-            
+            payload = {'projectName': row[3]}
             r = session.get(
-                server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/listRoles?",
-        params=payload)
-
+                server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/listUsersBoundToProject?",
+                params=payload)
+            
+            # Extraction of the user linked to the project
             try:
                 result = json.loads(r.text)
             except:
                 logger.error("The project {0} does not exist".format(row[2]))
                 logger.error(r.text)
+                continue
+
+            for elt in result['result']:
+                user_list.append(elt['email'])
                 
+            #Check if the user is already in the project - then it removes him and add it again with the new settings
+            if (row[0] in user_list):
+                payload = {'projectName': row[3], 'ctx_project' : row[3], 'email' : row[0], }
+                r = session.get(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/removeUserFromProject?",
+                    params=payload)
+                logger.info("The user " + row[0] + " is removed from the project " + row[3])
+                
+            # Extraction of the roles available
+            payload = {'projectName': row[3]}
+            r = session.get(
+                server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/listRoles?",
+                params=payload)
+            
+            result = json.loads(r.text)
+            for elt in result['result']:
+                role_list.append(elt['name'])
+                
+            # Extraction of the groups - We do not use groups
+            r = session.get(
+                server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/UsersGroups/listGroups?")
+            
+            # Extraction of the languages availabble
+            payload = {'properties':'languages', 'projectName': row[3]}
+            r = session.get(
+                server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/PreferencesSettings/getProjectSettings?",
+                params=payload)
+
+            result = json.loads(r.text)
+            res = json.loads(result['result']['languages'])
+            for l in res:
+                lang_list.append(l['name'])
+
+            r = session.get(
+                server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/listUsers?")
+
+            payload = {'projectName': row[3]}
+            r = session.get(
+                server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/listRoles?",
+                params=payload)
+            
+            # Insert the roles to the user
             if (row[1] == "all"):
-                for l in result["result"]:
-                    payload = {'projectName': row[2], 'email' : row[0], 'roles': l["name"]}
-                    r = session.get(
-                        server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/addRolesToUser?",
-        params=payload)
-                    logger.info("the user {0} is added into the project : {1}".format(user, row[2]))
+                roles = ""
+                for l in role_list:
+                    roles = roles + l["name"] + ","
+                roles = roles.lstrip((","))
+                payload = {'projectName': row[2], 'email' : row[0], 'roles': roles}
+                r = session.get(
+                    server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/addRolesToUser?",
+                params=payload)
+                logger.info("the user {0} is added into the project : {1}".format(user, row[2]))
             else:
                 no_role_found = False
+                
                 for l in result["result"]:
                     if (row[1] == l["name"]):
                         payload = {'projectName': row[2], 'email': row[0], 'roles': l["name"]}
                         r = session.get(
                             server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/addRolesToUser?",
-        params=payload)
+                            params=payload)
                         logger.info("the user {0} is added into the project : {1}".format(user, row[2]))
                         no_role_found = True
                 if not no_role_found:
                     logger.error("The requested role \"{0}\" does not exist in Vocbench".format(row[1]))
                     logger.error("The user {0} is not added to the project {1}".format(row[0], row[2]))
+
+            payload = {'projectName': row[3],  'email' : user}
+            r = session.get(
+                server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/getProjectUserBinding?",
+                params=payload)
+            
+            # Insert all the language to the user
+            for lang in lang_list:
+                payload = {'projectName': row[3], 'email': user, 'languages' : lang}
+                r = session.get(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/updateLanguagesOfUserInProject?",
+                    params=payload)
+            
     return
 
 #####################################################################
