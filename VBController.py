@@ -1206,7 +1206,7 @@ def add_user_to_project():
             result = json.loads(r.text)
             res = json.loads(result['result']['languages'])
             for l in res:
-                lang_list.append(l['name'])
+                lang_list.append(l['tag'])
 
             #Check if the user is already in the project - then it adds the new settings and all the languages
             if (row[0] in user_list):
@@ -1257,21 +1257,18 @@ def add_user_to_project():
                 # Insert the roles to the user
                 if (row[1] == "all"):
                     roles = ""
-                    for r in role_list:
-                        roles = roles + r + ","
-                        #roles = roles + l["name"] + ","
-                    roles = roles.lstrip((","))
-                    payload = {'projectName': row[3], 'email' : row[0], 'roles': roles, 'ctx_project' : row[3]}
-                    r = session.get(
-                        server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/addRolesToUser?",
-                    params=payload)
-                    logger.info("the user {0} is added into the project : {1}".format(user, row[2]))
+                    for role in role_list:
+                        payload = {'projectName': row[3], 'email' : row[0], 'roles': role, 'ctx_project' : row[3]}
+                        r = session.get(
+                            server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/addRolesToUser?",
+                        params=payload)
+                        logger.info("the user {0} is added into the project : {1}".format(user, row[2]))
                 else:
                     no_role_found = False
                     
-                    for l in result["result"]:
-                        if (row[1] == l["name"]):
-                            payload = {'projectName': row[3], 'email': row[0], 'roles': l["name"]}
+                    for l in role_list:
+                        if (row[1].strip() == l.strip()):
+                            payload = {'projectName': row[3], 'email': row[0], 'roles': l}
                             r = session.get(
                                 server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/addRolesToUser?",
                                 params=payload)
@@ -1287,11 +1284,15 @@ def add_user_to_project():
                     params=payload)
                 
                 # Insert all the language to the user
-                for lang in lang_list:
-                    payload = {'projectName': row[3], 'email': user, 'languages' : lang}
-                    r = session.get(
-                        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/updateLanguagesOfUserInProject?",
-                        params=payload)
+                lang = ""
+                for l in lang_list:
+                    lang = lang + l + ","
+                
+                lang = lang.rstrip(",")
+                payload = {'projectName': row[3], 'email': user, 'languages' : lang}
+                r = session.post(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/updateLanguagesOfUserInProject?",
+                    params=payload)
             
     return
 
