@@ -1336,11 +1336,6 @@ def relationship_insertion():
                 server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/updateAccessLevel?",
         params=payload)
 
-            payload = {'projectName': project_1, 'lockLevel': 'NO'}
-            r = session.post(
-                server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/updateLockLevel?",
-        params=payload)
-
             r = session.get(
                 server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/getAccessStatusMap?")
 
@@ -1349,10 +1344,7 @@ def relationship_insertion():
                 server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/updateAccessLevel?",
         params=payload)
 
-            payload = {'projectName': project_2, 'lockLevel': 'NO'}
-            r = session.post(
-                server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/updateLockLevel?",
-        params=payload)
+        
     return
 
 #####################################################################
