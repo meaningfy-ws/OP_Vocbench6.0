@@ -1238,7 +1238,12 @@ def add_user_to_project():
                     r = session.get(
                         server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/updateLanguagesOfUserInProject?",
                         params=payload)
-            
+
+                payload = {'projectName': row[3], 'email': user}
+                r = session.get(
+                    server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/getProjectUserBinding?",
+                    params=payload)
+                
             # When the user does not exist
             else :
                 r = session.get(
@@ -1252,11 +1257,11 @@ def add_user_to_project():
                 # Insert the roles to the user
                 if (row[1] == "all"):
                     roles = ""
-                    for l in role_list:
-                        roles = roles + l["name"] + ","
+                    for r in role_list:
+                        roles = roles + r + ","
                         #roles = roles + l["name"] + ","
                     roles = roles.lstrip((","))
-                    payload = {'projectName': row[2], 'email' : row[0], 'roles': roles}
+                    payload = {'projectName': row[3], 'email' : row[0], 'roles': roles, 'ctx_project' : row[3]}
                     r = session.get(
                         server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/addRolesToUser?",
                     params=payload)
@@ -1266,7 +1271,7 @@ def add_user_to_project():
                     
                     for l in result["result"]:
                         if (row[1] == l["name"]):
-                            payload = {'projectName': row[2], 'email': row[0], 'roles': l["name"]}
+                            payload = {'projectName': row[3], 'email': row[0], 'roles': l["name"]}
                             r = session.get(
                                 server   + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Administration/addRolesToUser?",
                                 params=payload)
