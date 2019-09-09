@@ -382,10 +382,8 @@ def get_user_per_project(project_name = ""):
     global port
     list = list_of_project()
     user_list = []
-    user = {}
     
     if len(project_name) > 0 :
-        open_project(project_name)
         payload = {'projectName': project_name}
         r = session.get(
             server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/listUsersBoundToProject?",
@@ -394,10 +392,10 @@ def get_user_per_project(project_name = ""):
         for r in res['result']:
             user = {'Project': project_name, 'Email': r['email'], 'Name': r['givenName'], 'Surname': r['familyName']}
             user_list.append(user)
+        close_project(project_name)
     else:
         for proj in list['result']:
             project_name = proj['name']
-            open_project(project_name)
             payload = {'projectName': project_name}
             r = session.get(
                 server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/listUsersBoundToProject?",
@@ -414,7 +412,7 @@ def get_user_per_project(project_name = ""):
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         writer.writeheader()
         for us in user_list:
-            writer.writerow({'Project': project_name, 'Email': r['email'], 'Name': r['givenName'], 'Surname' : r['familyName']})
+            writer.writerow({'Project': us['Project'], 'Email': us['Email'], 'Name': us['Name'], 'Surname' : us['Surname']})
         
     return user_list
 
