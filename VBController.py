@@ -370,12 +370,58 @@ def parse_nspace_nt(file_name):
     for n, v in n_spaces.items():
         print(n + ":" + v)
     return n_spaces
+    
+#######################################################################################
+# List the user per project - the User are given through their e-mail, name and surname
+# Print the list and save into a csv file under data/output
+#######################################################################################
+def get_user_per_project(project_name = ""):
+    connection()
+    global logger
+    global server
+    global port
+    list = list_of_project()
+    user_list = []
+    user = {}
+    
+    if len(project_name) > 0 :
+        open_project(project_name)
+        payload = {'projectName': project_name}
+        r = session.get(
+            server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/listUsersBoundToProject?",
+            params=payload)
+        res = json.loads(r.content)
+        for r in res['result']:
+            user = {'Project': project_name, 'Email': r['email'], 'Name': r['givenName'], 'Surname': r['familyName']}
+            user_list.append(user)
+    else:
+        for proj in list['result']:
+            project_name = proj['name']
+            open_project(project_name)
+            payload = {'projectName': project_name}
+            r = session.get(
+                server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/listUsersBoundToProject?",
+                params=payload)
+            res = json.loads(r.content)
 
+            for r in res['result']:
+                user = {'Project': project_name, 'Email': r['email'], 'Name': r['givenName'], 'Surname' : r['familyName']}
+                user_list.append(user)
+            
+    #Output of the project into a file
+    with open('data/output/users.csv', mode='w', newline='') as csv_file:
+        fieldnames = ['Project', 'Email', 'Name', 'Surname']
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+        writer.writeheader()
+        for us in user_list:
+            writer.writerow({'Project': project_name, 'Email': r['email'], 'Name': r['givenName'], 'Surname' : r['familyName']})
+        
+    return user_list
 
 ##############################################################
 # List all the projects inside the system
 ###############################################################
-def list_of_project(only_title):
+def list_of_project(only_title = True):
     connection()
     global logger
     global server
@@ -1874,8 +1920,6 @@ def main(argv):
         elif opt in ("-o"):
             project_name = arg
             importOntology(project_name)
-        elif opt in ("-t"):
-            parse_nspace_ttl("euvoc.ttl")
         elif opt in ("-v"):
             parse_nspace_rdf("languages-source-ap.rdf")
         elif opt in ("-e"):
@@ -1900,6 +1944,10 @@ def main(argv):
         elif opt in ("-z"):
             project = arg
             close_project(project)
+        #Test version
+        elif opt in ("-t"):
+            get_user_per_project()
+            # parse_nspace_ttl("euvoc.ttl")
         else:
             assert False, "unhandled option"
 
