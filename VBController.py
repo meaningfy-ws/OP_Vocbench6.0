@@ -1636,6 +1636,36 @@ def _add_standard_export_transformation(baseURI, project):
     return
 
 ################################################################
+# Automatic deletion of user (from Vocbench and GraphDB)
+################################################################
+def _automatic_user_deletion():
+    connection()
+    global logger
+    global session
+    
+    if (os.path.exists(os.path.join(files_folder, "Template_user_deletion.csv"))):
+        pathF = os.path.join(files_folder, "Template_user_deletion.csv")
+    else:
+        logger.error("the configuration file for the user(s) deletion can not be uploaded")
+        sys.exit()
+
+    with codecs.open(pathF, encoding='utf8') as f:
+        reader = csv.reader(f, delimiter=';')
+        first = True
+        for row in reader:
+            if first:
+                first = False
+                continue
+            user = row[0]
+            res = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/listUsers?")
+        
+            payload = {'email': user}
+            res = session.post(
+                server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Users/deleteUser?",
+                params=payload)
+    return
+
+################################################################
 # Automatic deletion of a project (from Vocbench and GraphDB)
 ################################################################
 def _automatic_project_deletion():
