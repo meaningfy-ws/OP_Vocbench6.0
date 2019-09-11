@@ -1122,6 +1122,14 @@ def generated_report():
 
     return
     
+################################################
+# Logout of a user
+################################################
+def logout():
+    global session
+    r = session.get(
+        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Auth/logout?")
+    return
 
 #####################################################################
 # Create new users into Vocbench
