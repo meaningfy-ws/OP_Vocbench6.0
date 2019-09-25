@@ -175,8 +175,7 @@ def connection():
     else:
         logger.info("Connection ok")
 
-    logger.info(str(r.content))
-    return
+    return json.loads(r.content)
 
 ###################################################################################################
 # Creation of projects into VocBench using the data from the file : "Template_Creation_Projects.csv"
