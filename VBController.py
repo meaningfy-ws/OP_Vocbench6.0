@@ -1213,6 +1213,7 @@ def add_user_to_project():
                 first = False
                 continue
             user = row[0]
+            user = user.lower()
             exist = check_existing_user(user)
             if not exist:
                 logger.info("the user {0} does not exist into Vocbench and cannot be added to the project : {1}".format(user, row[2]))
