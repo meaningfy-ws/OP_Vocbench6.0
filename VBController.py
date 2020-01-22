@@ -1166,6 +1166,7 @@ def create_new_user():
                 first = False
                 continue
             user = row[0]
+            user = user.lower()
             exist = check_existing_user(user)
             if exist:
                 logger.info("the following user is already created into Vocbench : " + user )
