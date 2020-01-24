@@ -699,6 +699,8 @@ def add_namespaces_list():
     global files_folder
     global logger
 
+    projects_list = []
+
     connection()
 
     if os.path.exists(os.path.join(files_folder, "Template_Insertion_Namespace.csv")):
@@ -718,16 +720,20 @@ def add_namespaces_list():
                 if temp_project_name != row[0]:
                     namespaces = get_declared_namespaces(row[0])
                     temp_project_name = row[0]
-                if (row[1] in namespaces.keys()):
+                if row[1] in namespaces.keys():
                     logger.error("The prefix is already into the project and cannot be inserted")
-                elif(row[2] in namespaces.values()):
+                elif row[2] in namespaces.values():
                     logger.error("The URI is already used as a prefix into the project and cannot be inserted")
                 else:
                     add_namespace(row[0], row[1], row[2])
                     namespaces[row[1]] = row[2]
-                    validate_all(row[0])
+                    if row[0] not in projects_list:
+                        projects_list.append(row[0])
             else:
                 first = False
+
+    for project in projects_list:
+        validate_all(project)
 
     return
 #############################################################################
