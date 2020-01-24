@@ -677,6 +677,7 @@ def get_declared_namespaces(project):
 
     global session
     connection()
+    open_project(project)
     payload = {'ctx_project': project}
     r = session.get(
         server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?",
@@ -716,13 +717,18 @@ def add_namespaces_list():
                 logger.info("Insertion of the namespace : " + row[2] + " on the project " + row[0])
                 if temp_project_name != row[0]:
                     namespaces = get_declared_namespaces(row[0])
+                    temp_project_name = row[0]
                 if (row[1] in namespaces.keys()):
                     logger.error("The prefix is already into the project and cannot be inserted")
                 elif(row[2] in namespaces.values()):
                     logger.error("The URI is already used as a prefix into the project and cannot be inserted")
                 else:
                     add_namespace(row[0], row[1], row[2])
-                    namespaces.append(row[1], row[2])
+                    namespaces[row[1]] = row[2]
+                    validate_all(row[0])
+            else:
+                first = False
+
     return
 #############################################################################
 # Add the specified name space to the designed project
@@ -743,7 +749,7 @@ def add_namespace(project_name, prefix, namespace):
     logger.info(r.content)
 
     r = session.get(
-        server + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getDefaultNamespace?",
+        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getDefaultNamespace?",
         params=payload)
 
     logger.info(r.content)
@@ -1971,7 +1977,7 @@ def main(argv):
     set_logger()
 
     try:
-        opts, args = getopt.getopt(sys.argv[1:],"a:cdef:ghik:lm:no:pq:u:vs:txwbr:jyz:v:",["setDataFd=","name_list=", "projectsFile=", "data=", "-clearData="])
+        opts, args = getopt.getopt(sys.argv[1:],"Aa:cdef:ghik:lm:no:pq:u:vs:txwbr:jyz:v:",["setDataFd=","name_list=", "projectsFile=", "data=", "-clearData="])
     except getopt.GetoptError:
         print ('AutoProject.py -d <datafile>')
         sys.exit(2)
@@ -2047,6 +2053,8 @@ def main(argv):
         elif opt in ("-t"):
             get_user_per_project()
             # parse_nspace_ttl("euvoc.ttl")
+        elif opt in "-A":
+            add_namespaces_list()
         else:
             assert False, "unhandled option"
 
@@ -2071,12 +2079,13 @@ def usagePrint():
     print('     -o                                  import ontologies describe in the file Template_Insertion__Ontology.csv')
     print('     -x                                  validate all the pending actions')
     print('     -e                                  insert a custom form inside a project (using the template ')
-    print('     -s  project_name prefix namespace   add a specific namespace on a project or from the configuration file Template_Insertion_Namespace')
+    print('     -s  project_name prefix namespace   add a specific namespace on a project')
     print('     -w                                  add new user (using the template Template_New_User.csv)')
     print('     -b                                  add new user to a specific project (using the Template_Add_User_To_Project.csv)')
     print('     -y                                  remove specific projects (using the Template_Project_deletion.csv)')
     print('     -j                                  configure the ACL of projects (link between projects) (using the file Template_Relation_Project_To_Project.csv)')
     print('     -r                                  create a report describing a specific project')
+    print('     -A                                  add namespaces on a project from the configuration file Template_Insertion_Namespace')
     
 
 
