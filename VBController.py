@@ -668,6 +668,63 @@ def get_namespace(project):
 
 
 #############################################################################
+# Add a list of name space to the designed project
+# @parameter : the name of the project
+# @return : a dictionary containing all the namespace already attached to
+# the project
+############################################################################
+def get_declared_namespaces(project):
+
+    global session
+    connection()
+    payload = {'ctx_project': project}
+    r = session.get(
+        server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?",
+        params=payload)
+    res = json.loads(r.text)
+    namespaces = {}
+    for r in res['result']:
+        namespaces[r['prefix']] = r['namespace']
+    return namespaces
+
+#############################################################################
+# Add a list of name space to the designed project
+# based on the information from the file Template_Insertion_Namespace
+############################################################################
+def add_namespaces_list():
+
+    global session
+    global dataFile
+    global files_folder
+    global logger
+
+    connection()
+
+    if os.path.exists(os.path.join(files_folder, "Template_Insertion_Namespace.csv")):
+        pathf = os.path.join(files_folder, "Template_Insertion_Namespace.csv")
+    else:
+        logger.error("The data file is not declared or not find")
+        sys.exit()
+
+    with codecs.open(pathf, encoding='utf8') as f:
+        reader = csv.reader(f, delimiter=';')
+        first = True
+        temp_project_name = ""
+        namespaces = {}
+        for row in reader:
+            if not first:
+                logger.info("Insertion of the namespace : " + row[2] + " on the project " + row[0])
+                if temp_project_name != row[0]:
+                    namespaces = get_declared_namespaces(row[0])
+                if (row[1] in namespaces.keys()):
+                    logger.error("The prefix is already into the project and cannot be inserted")
+                elif(row[2] in namespaces.values()):
+                    logger.error("The URI is already used as a prefix into the project and cannot be inserted")
+                else:
+                    add_namespace(row[0], row[1], row[2])
+                    namespaces.append(row[1], row[2])
+    return
+#############################################################################
 # Add the specified name space to the designed project
 ############################################################################
 def add_namespace(project_name, prefix, namespace):
@@ -2014,7 +2071,7 @@ def usagePrint():
     print('     -o                                  import ontologies describe in the file Template_Insertion__Ontology.csv')
     print('     -x                                  validate all the pending actions')
     print('     -e                                  insert a custom form inside a project (using the template ')
-    print('     -s  project_name prefix namespace   add namespaces')
+    print('     -s  project_name prefix namespace   add a specific namespace on a project or from the configuration file Template_Insertion_Namespace')
     print('     -w                                  add new user (using the template Template_New_User.csv)')
     print('     -b                                  add new user to a specific project (using the Template_Add_User_To_Project.csv)')
     print('     -y                                  remove specific projects (using the Template_Project_deletion.csv)')
