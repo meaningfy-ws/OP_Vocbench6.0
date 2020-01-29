@@ -283,7 +283,10 @@ def project_creation():
                         continue
                     except:
                         logger.info(r.content)
-                    
+
+                    if row[20] == "yes":
+                        add_namespaces_list()
+
                     data_path = os.path.join(data_folder, row[15])
                     # Add the data if they are available
                     if(os.path.exists(data_path)):
@@ -297,16 +300,16 @@ def project_creation():
                     if (row[16] != ""):
                         if row[16] == "yes":
                             createForm()
-                    
+
                     if (row[17].lower() == 'yes'):
                         importOntology(row[0])
                         
                     if (row[18] == "yes"):
                         _add_standard_export_transformation(base_uri, row[0])
                     
-                    if (row[19] == "yes"):
+                    if row[19] == "yes":
                         add_user_to_project()
-                        
+
                     validate_all(row[0])
                     
                     close_project(row[0])
@@ -796,15 +799,19 @@ def add_namespace(project_name, prefix, namespace):
     
     payload = {'ctx_project': project_name, 'prefix':prefix, 'namespace':namespace}
     r = session.post(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/setNSPrefixMapping?", params=payload)
-    close_project(project_name)
-    
+
     logger.info(r.content)
-    
-    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?")
+
+    payload = {'ctx_project': project_name}
+
+    r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Metadata/getNamespaceMappings?", params=payload)
     
     logger.info(r.content)
     
     logger.info("The namespace : " + str(namespace) + " was added to the project " + project_name + " with the prefix : " + prefix)
+
+    close_project(project_name)
+
     return
 
 
