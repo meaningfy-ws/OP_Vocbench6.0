@@ -285,7 +285,7 @@ def project_creation():
                         logger.info(r.content)
 
                     if row[20] == "yes":
-                        add_namespaces_list()
+                        add_namespaces_list(row[0])
 
                     data_path = os.path.join(data_folder, row[15])
                     # Add the data if they are available
@@ -695,7 +695,7 @@ def get_declared_namespaces(project):
 # Add a list of name space to the designed project
 # based on the information from the file Template_Insertion_Namespace
 ############################################################################
-def add_namespaces_list():
+def add_namespaces_list(project = ""):
 
     global session
     global dataFile
@@ -719,6 +719,10 @@ def add_namespaces_list():
         namespaces = {}
         for row in reader:
             if not first:
+                # The namespaces can be added in batch after the creation of all the project or on a single project
+                # during the automatic project creation
+                if project != "" and project != row[0]:
+                    continue
                 logger.info("Insertion of the namespace : " + row[2] + " on the project " + row[0])
                 if temp_project_name != row[0]:
                     namespaces = get_declared_namespaces(row[0])
