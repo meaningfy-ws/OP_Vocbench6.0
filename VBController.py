@@ -299,7 +299,7 @@ def project_creation():
                 
                     if (row[16] != ""):
                         if row[16] == "yes":
-                            createForm()
+                            createForm(row[0])
 
                     if (row[17].lower() == 'yes'):
                         importOntology(row[0])
@@ -308,7 +308,7 @@ def project_creation():
                         _add_standard_export_transformation(base_uri, row[0])
                     
                     if row[19] == "yes":
-                        add_user_to_project()
+                        add_user_to_project(row[0])
 
                     validate_all(row[0])
                     
@@ -912,7 +912,7 @@ def parse_nspace_ttl(file_name):
 ###############################################
 # Create and import a custom form
 ##############################################
-def createForm():
+def createForm(proj=""):
     connection()
     global session
     global logger
@@ -935,7 +935,11 @@ def createForm():
                     if len(row) <3 :
                         logger.error('The configuration file for the custom forms is not well-formed')
                         continue
-                    
+                    # The namespaces can be added in batch after the creation of all the project or on a single project
+                    # during the automatic project creation
+                    if proj != "" and proj != row[0]:
+                        continue
+
                     project = row[0]
                     form = row[1]
                     
@@ -967,8 +971,6 @@ def createForm():
                     for res in result["result"]:
                         if ("it.uniroma2.art.semanticturkey.customform.form." + form == res['id']):
                             is_already = True
-    
-                    
 
                     # Check if the collection form already exist into the project
                     r = session.get(server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/CustomForms/getAllFormCollections?",
@@ -1270,7 +1272,7 @@ def create_new_user():
 #####################################################################
 # Create add users to a project
 #####################################################################
-def add_user_to_project():
+def add_user_to_project(proj=""):
     connection()
     global session
     global logger
@@ -1292,6 +1294,11 @@ def add_user_to_project():
             if first:
                 first = False
                 continue
+
+            # Add the users only to the requested project
+            if proj != "" and proj != row[3]:
+                continue
+
             user = row[0]
             user = user.lower()
             exist = check_existing_user(user)
