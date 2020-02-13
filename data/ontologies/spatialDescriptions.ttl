@@ -3,13 +3,7 @@
 
 @prefix : <http://publications.europa.eu/ontology/euvoc/spatialDescriptions#> .
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
-@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
-@prefix geor: <http://www.opengis.net/def/rule/geosparql/> .
-@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
-@prefix geosparqlsf: <http://www.opengis.net/ont/sf#> .
 @prefix geowgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix gml: <http://www.opengis.net/ont/gml#> .
-@prefix ogc: <http://www.opengis.net/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -21,7 +15,7 @@ euvoc:adminCenter
   rdf:type owl:ObjectProperty ;
   rdfs:comment "administrative center of a teritorial unit"^^xsd:string ;
   rdfs:label "admin center"^^xsd:string ;
-  owl:versionInfo "EuVoc 1.1"^^xsd:string ;
+   
 .
 euvoc:countryCode
   rdf:type owl:ObjectProperty ;
@@ -35,7 +29,7 @@ euvoc:culturalCity
   rdfs:domain skos:Concept ;
   rdfs:label "cultural city"^^xsd:string ;
   rdfs:range xsd:gYear ;
-  owl:versionInfo "EuVoc 1.1"^^xsd:string ;
+   
 .
 euvoc:localityCode
   rdf:type owl:ObjectProperty ;
@@ -49,18 +43,11 @@ euvoc:signatureLocation
   rdfs:label "signature location"^^xsd:string ;
   rdfs:range geowgs84:SpatialThing ;
   rdfs:subPropertyOf geowgs84:location ;
-  owl:versionInfo "EuVoc 1.1"^^xsd:string ;
+   
 .
 <http://publications.europa.eu/ontology/euvoc/spatialDescriptions>
   rdf:type owl:Ontology ;
   rdfs:comment "The EuVoc module importing or defining the geo-spatial relations and classes used in MDR authority tables"^^xsd:string ;
   rdfs:label "Spatial Descriptions"^^xsd:string ;
-  owl:imports <http://publications.europa.eu/ontology/euvoc/externalImports> ;
-  owl:versionInfo "EuVoc 1.1"^^xsd:string ;
-.
-geosparql:SpatialObject
-  owl:equivalentClass geowgs84:SpatialThing ;
-.
-geosparql:sfWithin
-  rdfs:subPropertyOf geowgs84:location ;
+   
 .

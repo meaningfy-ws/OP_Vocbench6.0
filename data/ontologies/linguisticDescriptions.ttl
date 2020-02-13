@@ -2,26 +2,111 @@
 # prefix: linguisticDescriptions
 
 @prefix : <http://publications.europa.eu/ontology/euvoc/linguisticDescriptions#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
-@prefix lemon: <http://lemon-model.net/lemon#> .
-@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
-@prefix lvont: <http://lexvo.org/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
-@prefix voaf: <http://purl.org/vocommons/voaf#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-euvoc:adjectivalForm
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "indicates the relation between the adjectival form and a noun. Both are instances of skosxl:Label."@en ;
-.
+
 <http://publications.europa.eu/ontology/euvoc/linguisticDescriptions>
   rdf:type owl:Ontology ;
   rdfs:comment "The EuVoc module importing and defining the linguistic relations and classes used in MDR authority tables"^^xsd:string ;
-  rdfs:label "Linguistic Descriptions"^^xsd:string ;
-  owl:imports <http://publications.europa.eu/ontology/euvoc/externalImports> ;
-  owl:versionIRI <http://publications.europa.eu/ontology/euvoc/linguisticDescriptions#1.1> ;
-  owl:versionInfo "EuVoc 1.1"^^xsd:string ;
+  rdfs:label "Linguistic Descriptions"^^xsd:string ;  
+.
+
+euvoc:XlNotation
+  a owl:Class ;
+  rdfs:comment "Current value and historical values of skos:notation."@en ;
+  rdfs:label "Notation (reified SKOS notation)" ;  
+.
+
+euvoc:XlNote
+  a owl:Class ;
+  rdfs:comment "Current value and historical values of skos:note"@en ;
+  rdfs:label "Note (reified SKOS note)" ;
+.
+
+euvoc:context
+  a owl:ObjectProperty ;
+  rdfs:comment "context" ;
+  rdfs:label "context" ;
+  skos:prefLabel "context" ;
+.
+
+euvoc:domain
+  a owl:ObjectProperty ;
+  rdfs:comment "To indicate the subject of the controlled vocabulary based on the Domain vocabulary, part of EuroVoc"@en ;
+  rdfs:domain skos:ConceptScheme ;  
+.
+
+euvoc:order
+  a owl:DatatypeProperty ;
+  rdfs:comment "Current value of the order of the resource among its siblings"@en ;
+  rdfs:range xsd:integer ;
+.
+
+
+euvoc:status
+  a owl:ObjectProperty ;
+  rdfs:comment "Indicates the status of a skos:Concept or a skosxl:Label, or any resource related to controlled vocabulary management."@en ;
+  rdfs:range euvoc:ConceptStatus ;
+.
+
+euvoc:xlChangeNote
+  a owl:ObjectProperty ;
+  rdfs:comment "This property is a reified version of the skos:changeNote" ;
+  rdfs:label "xl change note" ;
+  rdfs:range euvoc:XlNote ;
+  rdfs:subPropertyOf euvoc:xlNote ;
+  skos:prefLabel "xl change note" ;
+.
+
+
+
+euvoc:xlDefinition
+  a owl:ObjectProperty ;
+  rdfs:comment "Relates a resource to the current and historical values of a skos:note."@en ;
+  rdfs:range euvoc:XlNote ;
+  rdfs:subPropertyOf euvoc:xlNote ;
+.
+euvoc:xlEditorialNote
+  a owl:ObjectProperty ;
+  rdfs:comment "This property is a reified version of the skos:editorialNote" ;
+  rdfs:label "xl editorial note" ;
+  rdfs:range euvoc:XlNote ;
+  rdfs:subPropertyOf euvoc:xlNote ;
+  skos:prefLabel "xl editorial note" ;
+.
+
+euvoc:xlHistoryNote
+  a owl:ObjectProperty ;
+  rdfs:comment "This property is a reified version of the skos:historyNote" ;
+  rdfs:label "xl history note" ;
+  rdfs:range euvoc:XlNote ;
+  rdfs:subPropertyOf euvoc:xlNote ;
+  skos:prefLabel "xl history note" ;
+.
+euvoc:xlNotation
+  a owl:ObjectProperty ;
+  rdfs:comment "Relates a resource to a Notation value."@en ;
+  rdfs:range euvoc:XlNotation ;
+.
+euvoc:xlNote
+  a owl:ObjectProperty ;
+  rdfs:comment "This property is used to indicates the current and historical value of a note, for example a skos:note"@en ;
+  rdfs:range euvoc:XlNote ;
+.
+
+
+euvoc:xlScopeNote
+  a owl:ObjectProperty ;
+  rdfs:comment "This property is a reified version of the skos:scopeNote" ;
+  rdfs:label "xl scope note" ;
+  rdfs:range euvoc:XlNote ;
+  rdfs:subPropertyOf euvoc:xlNote ;
+  skos:prefLabel "xl scope note" ;
 .

@@ -451,5 +451,5 @@ euvoc:WHOISWHO
 <http://publications.europa.eu/ontology/euvoc/dataTypeDefinitions>
   rdf:type owl:Ontology ;
   rdfs:comment "The Notation type NAL provides the list of notation types used in authority tables."^^rdfs:Literal ;
-  owl:versionInfo "DUMMYVERSION" ;
+
 .

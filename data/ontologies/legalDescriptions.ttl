@@ -20,24 +20,54 @@ euvoc:legalBasisFor
   rdfs:comment "Indicates that this legal resource or expression empowers another resource."@en ;
   rdfs:label "legal basis for" ;
   owl:inverseOf euvoc:legallyBasedOn ;
-  owl:versionInfo "EuVoc 1.1" ;
+   
 .
 euvoc:legallyBasedOn
   rdf:type owl:ObjectProperty ;
   rdfs:comment "Indicates that this resource is empowered by a legal resource, typically a constitution, a treaty or an enabling act. Inverse of \"legalBasisFor\"."@en ;
   rdfs:label "legally based on" ;
   owl:inverseOf euvoc:legalBasisFor ;
-  owl:versionInfo "EuVoc 1.1" ;
+   
 .
 euvoc:legallyBasedOnTreaty
   rdf:type owl:ObjectProperty ;
   rdfs:comment "Indicates that this resource is empowered by a a treaty."@en ;
   rdfs:label "legally based on treaty" ;
   rdfs:subPropertyOf euvoc:legallyBasedOn ;
-  owl:versionInfo "EuVoc 1.1" ;
+   
 .
 <http://publications.europa.eu/ontology/euvoc/legalDescriptions>
   rdf:type owl:Ontology ;
   owl:imports <http://publications.europa.eu/ontology/euvoc/externalImports> ;
   owl:versionInfo "This Module manages legal resources" ;
+.
+
+euvoc:adoptedEuroCurrencyOn
+  a owl:DatatypeProperty ;
+  rdfs:comment "adopted euro currency on" ;
+  rdfs:label "adopted euro currency on" ;
+  rdfs:range xsd:date ;
+   
+.
+
+euvoc:officialJournalDate
+  a owl:DatatypeProperty ;
+  rdfs:comment "official journal date; originally used in treaties table" ;
+  rdfs:label "official journal date" ;
+  rdfs:range xsd:date ;
+   
+.
+euvoc:officialJournalNumber
+  a owl:DatatypeProperty ;
+  rdfs:comment "official journal number; originally used in treaty table" ;
+  rdfs:label "official journal number" ;
+  rdfs:range xsd:string ;
+   
+.
+euvoc:officialJournalSeries
+  a owl:DatatypeProperty ;
+  rdfs:comment "official journal series; originally used in treaties table" ;
+  rdfs:label "official journal series" ;
+  rdfs:range xsd:string ;
+   
 .
