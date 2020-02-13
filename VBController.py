@@ -1472,7 +1472,9 @@ def relationship_insertion():
             
             if project_1 == "" or project_2 == "":
                 continue
-                
+
+            logger.info("The following projects are: linked  " + project_1 + " - " + project_2)
+
             r = session.get(
                 server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/getAccessStatusMap?")
 
@@ -1481,15 +1483,20 @@ def relationship_insertion():
                 server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/updateAccessLevel?",
         params=payload)
 
+            logger.info(r.content)
+
             r = session.get(
                 server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/getAccessStatusMap?")
+
+            logger.info(r.content)
 
             payload = {'projectName': project_2, 'consumerName': project_1, 'accessLevel': 'R'}
             r = session.post(
                 server + port + "/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/updateAccessLevel?",
-        params=payload)
+                params=payload)
 
-        
+            logger.info(r.content)
+
     return
 
 #####################################################################
