@@ -1,4 +1,5 @@
 *.nt
+.idea
 /.idea
 
 # Byte-compiled / optimized / DLL files
@@ -116,3 +117,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/data/customforms/
+/data/files/NAL creation/
+/data/files/Previous/
+/data/files/Sauvegarde/
+/data/files/Sauvegarde 2/
+/data/customforms/
