@@ -1,0 +1,2 @@
+Project Name;base URI;Model;lexicalization Model;History enabled;validation Enabled;repository Access;Consumer;Core repo id;Support report id;Data file
+g45;http://legivoc.org/fr/;<http://www.w3.org/2004/02/skos/core>;<http://www.w3.org/2008/05/skos-xl>;false;false;"{""@type"":""CreateLocal""}";SYSTEM;FirstProject_core;FirstProject_support;./All_data/all_fr.xml
